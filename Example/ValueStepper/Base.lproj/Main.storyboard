@@ -43,31 +43,8 @@
                                     <action selector="valueChanged2:" destination="vXZ-lx-hvc" eventType="valueChanged" id="a1c-TQ-Hjj"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03c-0U-hbd" customClass="ValueStepper" customModule="ValueStepper">
-                                <rect key="frame" x="386" y="285" width="141" height="29"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.96780620805369133" green="0.74706375838926176" blue="0.22706061241610737" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="oWP-Xx-Ukl"/>
-                                    <constraint firstAttribute="width" constant="141" id="zKo-Tf-fFF"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                        <real key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hh2-tW-5BE" customClass="ValueStepper" customModule="ValueStepper">
-                                <rect key="frame" x="74" y="285" width="141" height="29"/>
+                                <rect key="frame" x="230" y="236" width="141" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -98,16 +75,57 @@
                                     <action selector="valueChanged1:" destination="vXZ-lx-hvc" eventType="valueChanged" id="FWp-Vn-4Ou"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03c-0U-hbd" customClass="ValueStepper" customModule="ValueStepper">
+                                <rect key="frame" x="230" y="334" width="141" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.96780620805369133" green="0.74706375838926176" blue="0.22706061241610737" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="o3k-ea-5ju"/>
+                                    <constraint firstAttribute="height" constant="29" id="oWP-Xx-Ukl"/>
+                                    <constraint firstAttribute="width" constant="141" id="zKo-Tf-fFF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="1000"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="zKo-Tf-fFF"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="03c-0U-hbd" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="4FP-zi-NyV"/>
+                            <constraint firstItem="03c-0U-hbd" firstAttribute="top" secondItem="Dzk-BA-h5o" secondAttribute="bottom" constant="20" id="8WJ-2l-47a"/>
+                            <constraint firstItem="03c-0U-hbd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="CB6-v4-StF"/>
+                            <constraint firstItem="hh2-tW-5BE" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="F6V-DO-QOe"/>
                             <constraint firstItem="03c-0U-hbd" firstAttribute="leading" secondItem="Dzk-BA-h5o" secondAttribute="trailing" constant="15" id="OJw-Du-1wu"/>
                             <constraint firstItem="Dzk-BA-h5o" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="S1E-bD-G86"/>
+                            <constraint firstItem="Dzk-BA-h5o" firstAttribute="top" secondItem="hh2-tW-5BE" secondAttribute="bottom" constant="20" id="Yhy-xm-KQQ"/>
                             <constraint firstItem="Dzk-BA-h5o" firstAttribute="leading" secondItem="hh2-tW-5BE" secondAttribute="trailing" constant="15" id="fay-RZ-JUW"/>
                             <constraint firstItem="hh2-tW-5BE" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="h9o-GD-cUs"/>
                             <constraint firstItem="Dzk-BA-h5o" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="p2z-2w-sBM"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="h9o-GD-cUs"/>
+                                <exclude reference="fay-RZ-JUW"/>
+                                <exclude reference="4FP-zi-NyV"/>
+                                <exclude reference="OJw-Du-1wu"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="stepper1" destination="hh2-tW-5BE" id="naO-RZ-kCN"/>
