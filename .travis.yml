@@ -1,5 +1,6 @@
 before_install:
   - gem install cocoapods -v '0.39.0'
+  - cd Example && pod install
 
 cache:
   - bundler
