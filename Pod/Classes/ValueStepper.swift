@@ -35,7 +35,9 @@ private enum Button: Int {
     /// Current value and sends UIControlEventValueChanged when modified.
     @IBInspectable public var value: Double = 0.0 {
         didSet {
-            if oldValue != value {
+            if value > maximumValue || value < minimumValue {
+               // Value is possibly out of range, it means we're setting up the values so discard any update to the UI.
+            } else if oldValue != value {
                 sendActionsForControlEvents(.ValueChanged)
                 setFormattedValue(value)
                 setState()
