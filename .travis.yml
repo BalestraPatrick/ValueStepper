@@ -1,0 +1,15 @@
+language: objective-c
+cache: cocoapods
+podfile: Example/Podfile
+rvm: 2.2.2
+osx_image: xcode7.3
+
+before_install:
+- gem install cocoapods
+- gem install xcpretty
+- pod install --project-directory=Example
+
+
+script:
+- set -o pipefail && xctool build -workspace Example/ValueStepper.xcworkspace -scheme ValueStepper-Example -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.2' ONLY_ACTIVE_ARCH=NO | xcpretty
+- pod lib lint
