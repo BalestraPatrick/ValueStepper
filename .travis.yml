@@ -1,10 +1,12 @@
 language: objective-c
 cache: cocoapods
 podfile: Example/Podfile
+rvm: 2.2.2
 
 before_install:
-- gem install cocoapods # Since Travis is not always on latest version
+- gem install cocoapods
 - pod install --project-directory=Example
+
 
 script:
 - set -o pipefail && xcodebuild test -workspace Example/ValueStepper.xcworkspace -scheme ValueStepper-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
