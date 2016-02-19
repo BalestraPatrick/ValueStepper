@@ -1,0 +1,6 @@
+framework module ValueStepper {
+  umbrella header "ValueStepper-umbrella.h"
+
+  export *
+  module * { export * }
+}

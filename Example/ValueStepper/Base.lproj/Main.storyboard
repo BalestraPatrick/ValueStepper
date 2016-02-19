@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ValueStepper_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dzk-BA-h5o" customClass="ValueStepper" customModule="ValueStepper">
+                                <rect key="frame" x="230" y="285" width="141" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.37172294463087246" green="0.79281145134228193" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="6LS-k2-Dkn"/>
+                                    <constraint firstAttribute="height" constant="29" id="JEv-mv-D73"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="valueChanged2:" destination="vXZ-lx-hvc" eventType="valueChanged" id="a1c-TQ-Hjj"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03c-0U-hbd" customClass="ValueStepper" customModule="ValueStepper">
+                                <rect key="frame" x="386" y="285" width="141" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.96780620805369133" green="0.74706375838926176" blue="0.22706061241610737" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="oWP-Xx-Ukl"/>
+                                    <constraint firstAttribute="width" constant="141" id="zKo-Tf-fFF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hh2-tW-5BE" customClass="ValueStepper" customModule="ValueStepper">
+                                <rect key="frame" x="74" y="285" width="141" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="141" id="kvC-Ab-kfU"/>
+                                    <constraint firstAttribute="width" constant="141" id="n1T-Eb-8s8"/>
+                                    <constraint firstAttribute="height" constant="29" id="usd-CZ-Khu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
+                                        <real key="value" value="0.01"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kvC-Ab-kfU"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="valueChanged1:" destination="vXZ-lx-hvc" eventType="valueChanged" id="FWp-Vn-4Ou"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="03c-0U-hbd" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="4FP-zi-NyV"/>
+                            <constraint firstItem="03c-0U-hbd" firstAttribute="leading" secondItem="Dzk-BA-h5o" secondAttribute="trailing" constant="15" id="OJw-Du-1wu"/>
+                            <constraint firstItem="Dzk-BA-h5o" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="S1E-bD-G86"/>
+                            <constraint firstItem="Dzk-BA-h5o" firstAttribute="leading" secondItem="hh2-tW-5BE" secondAttribute="trailing" constant="15" id="fay-RZ-JUW"/>
+                            <constraint firstItem="hh2-tW-5BE" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="h9o-GD-cUs"/>
+                            <constraint firstItem="Dzk-BA-h5o" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="p2z-2w-sBM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stepper1" destination="hh2-tW-5BE" id="naO-RZ-kCN"/>
+                        <outlet property="stepper2" destination="Dzk-BA-h5o" id="pgv-4Y-dmZ"/>
+                        <outlet property="stepper3" destination="03c-0U-hbd" id="bHt-aR-3jB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="187"/>
+        </scene>
+    </scenes>
+</document>

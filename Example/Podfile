@@ -1,0 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'ValueStepper_Example' do
+  pod 'ValueStepper', :path => '../'
+end
+
+target 'ValueStepper_Tests' do
+  pod 'ValueStepper', :path => '../'
+end

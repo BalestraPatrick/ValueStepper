@@ -1,0 +1,14 @@
+PODS:
+  - ValueStepper (0.1.0)
+
+DEPENDENCIES:
+  - ValueStepper (from `../`)
+
+EXTERNAL SOURCES:
+  ValueStepper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ValueStepper: cff35e5dffb45ad924629b5142969141a0f6760c
+
+COCOAPODS: 0.39.0
