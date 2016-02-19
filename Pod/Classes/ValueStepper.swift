@@ -64,6 +64,14 @@ private enum Button: Int {
         }
     }
     
+    /// Describes the format of the value.
+    private var numberFormatter: NSNumberFormatter = {
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }()
+    
     // Default width of the stepper. Taken from the official UIStepper object.
     public let defaultWidth = 141.0
     
