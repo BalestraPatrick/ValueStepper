@@ -1,6 +1,6 @@
 # ValueStepper
 
-[![CI Status](http://img.shields.io/travis/Patrick Balestra/ValueStepper.svg?style=flat)](https://travis-ci.org/Patrick Balestra/ValueStepper)
+[![CI Status](http://img.shields.io/travis/BalestraPatrick/ValueStepper.svg?style=flat)](https://travis-ci.org/BalestraPatrick/ValueStepper)
 [![Version](https://img.shields.io/cocoapods/v/ValueStepper.svg?style=flat)](http://cocoapods.org/pods/ValueStepper)
 [![License](https://img.shields.io/cocoapods/l/ValueStepper.svg?style=flat)](http://cocoapods.org/pods/ValueStepper)
 [![Platform](https://img.shields.io/cocoapods/p/ValueStepper.svg?style=flat)](http://cocoapods.org/pods/ValueStepper)
