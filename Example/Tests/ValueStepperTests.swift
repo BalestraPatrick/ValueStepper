@@ -12,4 +12,7 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
+    func testIncrement() {
+
+    }
 }
