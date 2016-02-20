@@ -104,14 +104,9 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0U-vq-Wf0" customClass="ValueStepper" customModule="ValueStepper">
-                                <rect key="frame" x="229.5" y="45" width="141" height="29"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="d0U-vq-Wf0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="25" id="0Ul-jW-u1h"/>
                             <constraint firstItem="03c-0U-hbd" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="4FP-zi-NyV"/>
                             <constraint firstItem="03c-0U-hbd" firstAttribute="top" secondItem="Dzk-BA-h5o" secondAttribute="bottom" constant="20" id="8WJ-2l-47a"/>
                             <constraint firstItem="03c-0U-hbd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="CB6-v4-StF"/>
@@ -119,7 +114,6 @@
                             <constraint firstItem="03c-0U-hbd" firstAttribute="leading" secondItem="Dzk-BA-h5o" secondAttribute="trailing" constant="15" id="OJw-Du-1wu"/>
                             <constraint firstItem="Dzk-BA-h5o" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="S1E-bD-G86"/>
                             <constraint firstItem="Dzk-BA-h5o" firstAttribute="top" secondItem="hh2-tW-5BE" secondAttribute="bottom" constant="20" id="Yhy-xm-KQQ"/>
-                            <constraint firstItem="d0U-vq-Wf0" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="cIg-Bg-cii"/>
                             <constraint firstItem="Dzk-BA-h5o" firstAttribute="leading" secondItem="hh2-tW-5BE" secondAttribute="trailing" constant="15" id="fay-RZ-JUW"/>
                             <constraint firstItem="hh2-tW-5BE" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="h9o-GD-cUs"/>
                             <constraint firstItem="Dzk-BA-h5o" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="p2z-2w-sBM"/>

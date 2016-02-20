@@ -8,17 +8,6 @@
 
 import UIKit
 
-/// The type of value of number.
-///
-/// - Integer:    The number without decimal part.
-/// - OneDecimal: The number rounded to the first decimal digit.
-/// - TwoDecimal: The number rounded to the second decimal digit.
-public enum NumberType {
-    case Integer
-    case OneDecimal
-    case TwoDecimal
-}
-
 /// Button tags
 ///
 /// - Decrease: Decrease button has tag 0.
@@ -57,20 +46,17 @@ private enum Button: Int {
     /// When set to true, keeping a button pressed will continuously increase/decrease the value every 0.1s.
     @IBInspectable public var autorepeat: Bool = true
     
-    /// The type of value that the value represents.
-    public var valueType: NumberType = .OneDecimal {
+    /// Describes the format of the value.
+    public var numberFormatter: NSNumberFormatter = {
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .DecimalStyle
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }() {
         didSet {
             setFormattedValue(value)
         }
     }
-    
-    /// Describes the format of the value.
-    private var numberFormatter: NSNumberFormatter = {
-        let formatter = NSNumberFormatter()
-        formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
-        formatter.maximumFractionDigits = 2
-        return formatter
-    }()
     
     // Default width of the stepper. Taken from the official UIStepper object.
     public let defaultWidth = 141.0

@@ -27,7 +27,6 @@ let valueStepper: ValueStepper = {
     stepper.minimumValue = 0
     stepper.maximumValue = 1000
     stepper.stepValue = 100
-    stepper.valueType = .Integer
     return stepper
 }()
 
@@ -60,8 +59,8 @@ These are the available properties with the relative documentation.
 /// When set to true, keeping a button pressed will continuously increase/decrease the value every 0.1s.
 @IBInspectable public var autorepeat: Bool = true
     
-/// The type of value that the value represents.
-public var valueType: NumberType = .OneDecimal
+/// Describes the format of the value.
+public var numberFormatter: NSNumberFormatter
     
 // Default width of the stepper. Taken from the official UIStepper object.
 public let defaultWidth = 141.0
