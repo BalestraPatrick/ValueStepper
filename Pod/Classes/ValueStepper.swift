@@ -8,17 +8,6 @@
 
 import UIKit
 
-/// The type of value of number.
-///
-/// - Integer:    The number without decimal part.
-/// - OneDecimal: The number rounded to the first decimal digit.
-/// - TwoDecimal: The number rounded to the second decimal digit.
-public enum NumberType {
-    case Integer
-    case OneDecimal
-    case TwoDecimal
-}
-
 /// Button tags
 ///
 /// - Decrease: Decrease button has tag 0.
@@ -57,8 +46,13 @@ private enum Button: Int {
     /// When set to true, keeping a button pressed will continuously increase/decrease the value every 0.1s.
     @IBInspectable public var autorepeat: Bool = true
     
-    /// The type of value that the value represents.
-    public var valueType: NumberType = .OneDecimal {
+    /// Describes the format of the value.
+    public var numberFormatter: NSNumberFormatter = {
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .DecimalStyle
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }() {
         didSet {
             setFormattedValue(value)
         }
@@ -140,6 +134,22 @@ private enum Button: Int {
         decreaseButton.addTarget(self, action: "selected:", forControlEvents: .TouchDown)
         increaseButton.addTarget(self, action: "selected:", forControlEvents: .TouchDown)
     }
+    
+    // MARK: Storyboard preview setup
+    
+    override public func prepareForInterfaceBuilder() {
+        setUp()
+    }
+    
+    public override func intrinsicContentSize() -> CGSize {
+        return CGSize(width: defaultWidth, height: defaultHeight)
+    }
+    
+    override public class func requiresConstraintBasedLayout() -> Bool {
+        return true
+    }
+    
+    // MARK: Lifecycle
     
     public override func layoutSubviews() {
         // Size constants
@@ -279,11 +289,11 @@ private enum Button: Int {
     // MARK: Actions
     
     private func setState() {
-        if value.round1 >= maximumValue {
+        if value >= maximumValue {
             increaseButton.enabled = false
             increaseLayer.strokeColor = UIColor.grayColor().CGColor
             continuousTimer?.invalidate()
-        } else if value.round1 <= minimumValue {
+        } else if value <= minimumValue {
             decreaseButton.enabled = false
             decreaseLayer.strokeColor = UIColor.grayColor().CGColor
             continuousTimer?.invalidate()
@@ -297,14 +307,7 @@ private enum Button: Int {
     
     // Display the value with the
     private func setFormattedValue(value: Double) {
-        switch valueType {
-        case .Integer:
-            valueLabel.text = String(Int(value))
-        case .OneDecimal:
-            valueLabel.text = String(value.round1)
-        case .TwoDecimal:
-            valueLabel.text = String(value.round2)
-        }
+        valueLabel.text = numberFormatter.stringFromNumber(value)
     }
     
     // Update all the subviews tintColor properties.
@@ -315,11 +318,4 @@ private enum Button: Int {
         rightSeparator.strokeColor = tintColor.CGColor
     }
     
-}
-
-// MARK: Double - Extension
-
-extension Double {
-    var round1: Double { return Double(round(100 * self) / 100) }
-    var round2: Double { return Double(round(1000 * self) / 1000) }
 }

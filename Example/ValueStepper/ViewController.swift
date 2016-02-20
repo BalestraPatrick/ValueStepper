@@ -10,16 +10,6 @@ import UIKit
 import ValueStepper
 
 class ViewController: UIViewController {
-    
-    let integerValueStepper: ValueStepper = {
-        let stepper = ValueStepper()
-        stepper.tintColor = .whiteColor()
-        stepper.minimumValue = 0
-        stepper.maximumValue = 1000
-        stepper.stepValue = 100
-        stepper.valueType = .Integer
-        return stepper
-    }()
 
     @IBOutlet weak var stepper1: ValueStepper!
     @IBOutlet weak var stepper2: ValueStepper!
@@ -28,7 +18,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stepper3.valueType = .Integer
+        // Set up currency number formatter
+        let moneyFormatter = NSNumberFormatter()
+        moneyFormatter.numberStyle = .CurrencyStyle
+        moneyFormatter.maximumFractionDigits = 0
+        stepper3.numberFormatter = moneyFormatter
+        
         stepper3.addTarget(self, action: "valueChanged3:", forControlEvents: .ValueChanged)
     }
     
