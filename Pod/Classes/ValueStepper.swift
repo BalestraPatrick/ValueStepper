@@ -289,11 +289,11 @@ private enum Button: Int {
     // MARK: Actions
     
     private func setState() {
-        if value.rounded(numberFormatter.maximumFractionDigits) >= maximumValue {
+        if value >= maximumValue {
             increaseButton.enabled = false
             increaseLayer.strokeColor = UIColor.grayColor().CGColor
             continuousTimer?.invalidate()
-        } else if value.rounded(numberFormatter.maximumFractionDigits) <= minimumValue {
+        } else if value <= minimumValue {
             decreaseButton.enabled = false
             decreaseLayer.strokeColor = UIColor.grayColor().CGColor
             continuousTimer?.invalidate()
@@ -318,13 +318,4 @@ private enum Button: Int {
         rightSeparator.strokeColor = tintColor.CGColor
     }
     
-}
-
-// MARK: Double rounding - Extension
-
-extension Double {
-    func rounded(digits: Int) -> Double {
-        let decimalValue = pow(10.0, Double(digits))
-        return round(self * decimalValue) / decimalValue
-    }
 }
