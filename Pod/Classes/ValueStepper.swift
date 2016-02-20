@@ -132,6 +132,7 @@ private enum Button: Int {
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        translatesAutoresizingMaskIntoConstraints = false
         setUp()
     }
     
@@ -148,6 +149,22 @@ private enum Button: Int {
         decreaseButton.addTarget(self, action: "selected:", forControlEvents: .TouchDown)
         increaseButton.addTarget(self, action: "selected:", forControlEvents: .TouchDown)
     }
+    
+    // MARK: Storyboard preview setup
+    
+    override public func prepareForInterfaceBuilder() {
+        setUp()
+    }
+    
+    public override func intrinsicContentSize() -> CGSize {
+        return CGSize(width: defaultWidth, height: defaultHeight)
+    }
+    
+    override public class func requiresConstraintBasedLayout() -> Bool {
+        return true
+    }
+    
+    // MARK: Lifecycle
     
     public override func layoutSubviews() {
         // Size constants
@@ -318,7 +335,7 @@ private enum Button: Int {
     
 }
 
-// MARK: Double - Extension
+// MARK: Double rounding - Extension
 
 extension Double {
     func rounded(digits: Int) -> Double {
