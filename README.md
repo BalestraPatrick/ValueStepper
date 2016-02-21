@@ -1,6 +1,7 @@
 # ValueStepper
 
 [![CI Status](http://img.shields.io/travis/BalestraPatrick/ValueStepper.svg?style=flat)](https://travis-ci.org/BalestraPatrick/ValueStepper)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/ValueStepper.svg?style=flat)](http://cocoapods.org/pods/ValueStepper)
 [![License](https://img.shields.io/cocoapods/l/ValueStepper.svg?style=flat)](http://cocoapods.org/pods/ValueStepper)
 [![Platform](https://img.shields.io/cocoapods/p/ValueStepper.svg?style=flat)](http://cocoapods.org/pods/ValueStepper)
@@ -72,13 +73,19 @@ public let defaultHeight = 29.0
 ## Installation
 
 ValueStepper is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+it, simply add the following line to your `Podfile`:
 
 ```ruby
 pod "ValueStepper"
 ```
+
+You can also use [Carthage](https://github.com/Carthage/Carthage) if you prefer. Add this line to your `Cartfile`.
+
+```ruby
+github "BalestraPatrick/ValueStepper"
+```
 ## Requirements
-iOS 8.3 and Swift 2.0 are required.
+iOS 8.3 and Swift 2.0 are required:
 
 ## Author
 
