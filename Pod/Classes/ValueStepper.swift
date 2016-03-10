@@ -127,12 +127,12 @@ private enum Button: Int {
         addSubview(increaseButton)
         
         // Control events
-        decreaseButton.addTarget(self, action: "decrease:", forControlEvents: .TouchUpInside)
-        increaseButton.addTarget(self, action: "increase:", forControlEvents: .TouchUpInside)
-        increaseButton.addTarget(self, action: "stopContinuous:", forControlEvents: .TouchUpOutside)
-        decreaseButton.addTarget(self, action: "stopContinuous:", forControlEvents: .TouchUpOutside)
-        decreaseButton.addTarget(self, action: "selected:", forControlEvents: .TouchDown)
-        increaseButton.addTarget(self, action: "selected:", forControlEvents: .TouchDown)
+        decreaseButton.addTarget(self, action: Selector("decrease:"), forControlEvents: .TouchUpInside)
+        increaseButton.addTarget(self, action: Selector("increase:"), forControlEvents: .TouchUpInside)
+        increaseButton.addTarget(self, action: Selector("stopContinuous:"), forControlEvents: .TouchUpOutside)
+        decreaseButton.addTarget(self, action: Selector("stopContinuous:"), forControlEvents: .TouchUpOutside)
+        decreaseButton.addTarget(self, action: Selector("selected:"), forControlEvents: .TouchDown)
+        increaseButton.addTarget(self, action: Selector("selected:"), forControlEvents: .TouchDown)
     }
     
     // MARK: Storyboard preview setup
@@ -276,7 +276,7 @@ private enum Button: Int {
     func selected(sender: UIButton) {
         // Start a timer to handle the continuous pressed case
         if autorepeat {
-            continuousTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "continuousIncrement:", userInfo: ["sender" : sender], repeats: true)
+            continuousTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("continuousIncrement:"), userInfo: ["sender" : sender], repeats: true)
         }
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.1)
     }
