@@ -85,7 +85,7 @@ You can also use [Carthage](https://github.com/Carthage/Carthage) if you prefer.
 github "BalestraPatrick/ValueStepper"
 ```
 ## Requirements
-iOS 8.3 and Swift 2.0 are required:
+iOS 8.3 and Swift 2.0 are required.
 
 ## Author
 
