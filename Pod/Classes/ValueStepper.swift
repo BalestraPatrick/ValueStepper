@@ -280,7 +280,7 @@ private enum Button: Int {
     func selected(sender: UIButton) {
         // Start a timer to handle the continuous pressed case
         if autorepeat {
-            continuousTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(continuousIncrement(_:)), userInfo: ["sender" : sender], repeats: true)
+            continuousTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(continuousIncrement), userInfo: ["sender" : sender], repeats: true)
         }
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.1)
     }
