@@ -127,15 +127,19 @@ private enum Button: Int {
         addSubview(increaseButton)
         
         // Control events
-        decreaseButton.addTarget(self, action: Selector("decrease:"), forControlEvents: .TouchUpInside)
-        increaseButton.addTarget(self, action: Selector("increase:"), forControlEvents: .TouchUpInside)
-        increaseButton.addTarget(self, action: Selector("stopContinuous:"), forControlEvents: .TouchUpOutside)
-        decreaseButton.addTarget(self, action: Selector("stopContinuous:"), forControlEvents: .TouchUpOutside)
-        decreaseButton.addTarget(self, action: Selector("selected:"), forControlEvents: .TouchDown)
-        increaseButton.addTarget(self, action: Selector("selected:"), forControlEvents: .TouchDown)
+        decreaseButton.addTarget(self, action: #selector(increase(_:)), forControlEvents: .TouchUpInside)
+        increaseButton.addTarget(self, action: #selector(increase(_:)), forControlEvents: .TouchUpInside)
+        increaseButton.addTarget(self, action: #selector(stopContinuous(_:)), forControlEvents: .TouchUpOutside)
+        decreaseButton.addTarget(self, action: #selector(stopContinuous(_:)), forControlEvents: .TouchUpOutside)
+        decreaseButton.addTarget(self, action: #selector(selected(_:)), forControlEvents: .TouchDown)
+        increaseButton.addTarget(self, action: #selector(selected(_:)), forControlEvents: .TouchDown)
     }
     
     // MARK: Storyboard preview setup
+    
+    func increase() {
+        
+    }
     
     override public func prepareForInterfaceBuilder() {
         setUp()
