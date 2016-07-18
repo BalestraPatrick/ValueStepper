@@ -127,7 +127,7 @@ private enum Button: Int {
         addSubview(increaseButton)
         
         // Control events
-        decreaseButton.addTarget(self, action: #selector(increase(_:)), forControlEvents: .TouchUpInside)
+        decreaseButton.addTarget(self, action: #selector(decrease(_:)), forControlEvents: .TouchUpInside)
         increaseButton.addTarget(self, action: #selector(increase(_:)), forControlEvents: .TouchUpInside)
         increaseButton.addTarget(self, action: #selector(stopContinuous(_:)), forControlEvents: .TouchUpOutside)
         decreaseButton.addTarget(self, action: #selector(stopContinuous(_:)), forControlEvents: .TouchUpOutside)
