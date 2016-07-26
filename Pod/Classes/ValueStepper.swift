@@ -252,7 +252,6 @@ private enum Button: Int {
         // If there is a timer, stop it before it overflows the minimum value.
         if let timer = continuousTimer {
             timer.invalidate()
-            return
         }
         value -= stepValue
     }
@@ -262,7 +261,6 @@ private enum Button: Int {
         // If there is a timer, stop it before it overflows the maximum value.
         if let timer = continuousTimer {
             timer.invalidate()
-            return
         }
         value += stepValue
     }
