@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ValueStepper"
-  s.version          = "0.5"
+  s.version          = "0.6"
   s.summary          = "A Stepper object that displays its value."
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,4 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'ValueStepper' => ['Pod/Assets/*.png']
-  }
 end
