@@ -19,12 +19,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Set up currency number formatter
-        let moneyFormatter = NSNumberFormatter()
-        moneyFormatter.numberStyle = .CurrencyStyle
+        let moneyFormatter = NumberFormatter()
+        moneyFormatter.numberStyle = .currency
         moneyFormatter.maximumFractionDigits = 0
         stepper3.numberFormatter = moneyFormatter
         
-        stepper3.addTarget(self, action: #selector(ViewController.valueChanged3(_:)), forControlEvents: .ValueChanged)
+        stepper3.addTarget(self, action: "valueChanged3:", for: .valueChanged)
     }
     
     @IBAction func valueChanged1(sender: ValueStepper) {

@@ -13,8 +13,8 @@ import UIKit
 /// - Decrease: Decrease button has tag 0.
 /// - Increase: Increase button has tag 1.
 private enum Button: Int {
-    case Decrease
-    case Increase
+    case decrease
+    case increase
 }
 
 @IBDesignable public class ValueStepper: UIControl {
@@ -27,7 +27,7 @@ private enum Button: Int {
             if value > maximumValue || value < minimumValue {
                // Value is possibly out of range, it means we're setting up the values so discard any update to the UI.
             } else if oldValue != value {
-                sendActionsForControlEvents(.ValueChanged)
+                sendActions(for: .valueChanged)
                 setFormattedValue(value)
                 setState()
             }
@@ -47,9 +47,9 @@ private enum Button: Int {
     @IBInspectable public var autorepeat: Bool = true
     
     /// Describes the format of the value.
-    public var numberFormatter: NSNumberFormatter = {
-        let formatter = NSNumberFormatter()
-        formatter.numberStyle = .DecimalStyle
+    public var numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
         return formatter
     }() {
@@ -68,25 +68,25 @@ private enum Button: Int {
     
     /// Decrease button positioned on the left of the stepper.
     private let decreaseButton: UIButton = {
-        let button = UIButton(type: UIButtonType.Custom)
-        button.backgroundColor = UIColor.clearColor()
-        button.tag = Button.Decrease.rawValue
+        let button = UIButton(type: UIButtonType.custom)
+        button.backgroundColor = UIColor.clear
+        button.tag = Button.decrease.rawValue
         return button
     }()
     
     /// Increase button positioned on the right of the stepper.
     private let increaseButton: UIButton = {
-        let button = UIButton(type: UIButtonType.Custom)
-        button.backgroundColor = UIColor.clearColor()
-        button.tag = Button.Increase.rawValue
+        let button = UIButton(type: UIButtonType.custom)
+        button.backgroundColor = UIColor.clear
+        button.tag = Button.increase.rawValue
         return button
     }()
     
     /// Value label that displays the current value displayed at the center of the stepper.
     private let valueLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .Center
-        label.backgroundColor = UIColor.clearColor()
+        label.textAlignment = .center
+        label.backgroundColor = UIColor.clear
         label.minimumScaleFactor = 0.5
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -105,7 +105,7 @@ private enum Button: Int {
     private var rightSeparator = CAShapeLayer()
     
     // Timer used in case that autorepeat is true to change the value continuously.
-    private var continuousTimer: NSTimer?
+    private var continuousTimer: Timer?
     
     // MARK: Initializers
     
@@ -127,12 +127,12 @@ private enum Button: Int {
         addSubview(increaseButton)
         
         // Control events
-        decreaseButton.addTarget(self, action: #selector(decrease(_:)), forControlEvents: .TouchUpInside)
-        increaseButton.addTarget(self, action: #selector(increase(_:)), forControlEvents: .TouchUpInside)
-        increaseButton.addTarget(self, action: #selector(stopContinuous(_:)), forControlEvents: .TouchUpOutside)
-        decreaseButton.addTarget(self, action: #selector(stopContinuous(_:)), forControlEvents: .TouchUpOutside)
-        decreaseButton.addTarget(self, action: #selector(selected(_:)), forControlEvents: .TouchDown)
-        increaseButton.addTarget(self, action: #selector(selected(_:)), forControlEvents: .TouchDown)
+        decreaseButton.addTarget(self, action: #selector(decrease(_:)), for: .touchUpInside)
+        increaseButton.addTarget(self, action: #selector(increase(_:)), for: .touchUpInside)
+        increaseButton.addTarget(self, action: #selector(stopContinuous(_:)), for: .touchUpOutside)
+        decreaseButton.addTarget(self, action: #selector(stopContinuous(_:)), for: .touchUpOutside)
+        decreaseButton.addTarget(self, action: #selector(selected(_:)), for: .touchDown)
+        increaseButton.addTarget(self, action: #selector(selected(_:)), for: .touchDown)
     }
     
     // MARK: Storyboard preview setup
@@ -144,13 +144,17 @@ private enum Button: Int {
     override public func prepareForInterfaceBuilder() {
         setUp()
     }
-    
-    public override func intrinsicContentSize() -> CGSize {
-        return CGSize(width: defaultWidth, height: defaultHeight)
+
+    public override var intrinsicContentSize: CGSize {
+        get {
+            return CGSize(width: defaultWidth, height: defaultHeight)
+        }
     }
     
-    override public class func requiresConstraintBasedLayout() -> Bool {
-        return true
+    public override static var requiresConstraintBasedLayout: Bool {
+        get {
+            return true
+        }
     }
     
     // MARK: Lifecycle
@@ -172,7 +176,7 @@ private enum Button: Int {
         setFormattedValue(value)
     }
     
-    public override func drawRect(rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         // Size constants
         let sliceWidth = bounds.width / 3
         let sliceHeight = bounds.height
@@ -180,65 +184,65 @@ private enum Button: Int {
         let iconSize: CGFloat = sliceHeight * 0.6
         
         // Layer customizations
-        layer.borderColor = tintColor.CGColor
+        layer.borderColor = tintColor.cgColor
         layer.borderWidth = 1.0
         layer.cornerRadius = 4.0
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clear
         clipsToBounds = true
         
         let leftPath = UIBezierPath()
         // Left separator line
-        leftPath.moveToPoint(CGPoint(x: sliceWidth, y: 0.0))
-        leftPath.addLineToPoint(CGPoint(x: sliceWidth, y: sliceHeight))
+        leftPath.move(to: CGPoint(x: sliceWidth, y: 0.0))
+        leftPath.addLine(to: CGPoint(x: sliceWidth, y: sliceHeight))
         tintColor.setStroke()
         leftPath.stroke()
         
         // Set left separator layer
-        leftSeparator.path = leftPath.CGPath
-        leftSeparator.strokeColor = tintColor.CGColor
+        leftSeparator.path = leftPath.cgPath
+        leftSeparator.strokeColor = tintColor.cgColor
         layer.addSublayer(leftSeparator)
         
         // Right separator line
         let rightPath = UIBezierPath()
-        rightPath.moveToPoint(CGPoint(x: sliceWidth * 2, y: 0.0))
-        rightPath.addLineToPoint(CGPoint(x: sliceWidth * 2, y: sliceHeight))
+        rightPath.move(to: CGPoint(x: sliceWidth * 2, y: 0.0))
+        rightPath.addLine(to: CGPoint(x: sliceWidth * 2, y: sliceHeight))
         tintColor.setStroke()
         rightPath.stroke()
         
         // Set right separator layer
-        rightSeparator.path = rightPath.CGPath
-        rightSeparator.strokeColor = tintColor.CGColor
+        rightSeparator.path = rightPath.cgPath
+        rightSeparator.strokeColor = tintColor.cgColor
         layer.addSublayer(rightSeparator)
         
         // - path
         let decreasePath = UIBezierPath()
         decreasePath.lineWidth = thickness
         // Horizontal + line
-        decreasePath.moveToPoint(CGPoint(x: (sliceWidth - iconSize) / 2 + 0.5, y: sliceHeight / 2 + 0.5))
-        decreasePath.addLineToPoint(CGPoint(x: (sliceWidth - iconSize) / 2 + 0.5 + iconSize, y: sliceHeight / 2 + 0.5))
+        decreasePath.move(to: CGPoint(x: (sliceWidth - iconSize) / 2 + 0.5, y: sliceHeight / 2 + 0.5))
+        decreasePath.addLine(to: CGPoint(x: (sliceWidth - iconSize) / 2 + 0.5 + iconSize, y: sliceHeight / 2 + 0.5))
         tintColor.setStroke()
         decreasePath.stroke()
         
         // Create layer so that we can dynamically change its color when not enabled
-        decreaseLayer.path = decreasePath.CGPath
-        decreaseLayer.strokeColor = tintColor.CGColor
+        decreaseLayer.path = decreasePath.cgPath
+        decreaseLayer.strokeColor = tintColor.cgColor
         layer.addSublayer(decreaseLayer)
         
         // + path
         let increasePath = UIBezierPath()
         increasePath.lineWidth = thickness
         // Horizontal + line
-        increasePath.moveToPoint(CGPoint(x: (sliceWidth - iconSize) / 2 + 0.5 + sliceWidth * 2, y: sliceHeight / 2 + 0.5))
-        increasePath.addLineToPoint(CGPoint(x: (sliceWidth - iconSize) / 2 + 0.5 + iconSize + sliceWidth * 2, y: sliceHeight / 2 + 0.5))
+        increasePath.move(to: CGPoint(x: (sliceWidth - iconSize) / 2 + 0.5 + sliceWidth * 2, y: sliceHeight / 2 + 0.5))
+        increasePath.addLine(to: CGPoint(x: (sliceWidth - iconSize) / 2 + 0.5 + iconSize + sliceWidth * 2, y: sliceHeight / 2 + 0.5))
         // Vertical + line
-        increasePath.moveToPoint(CGPoint(x: sliceWidth / 2 + 0.5 + sliceWidth * 2, y: (sliceHeight / 2) - (iconSize / 2) + 0.5))
-        increasePath.addLineToPoint(CGPoint(x: sliceWidth / 2 + 0.5 + sliceWidth * 2, y: (sliceHeight / 2) + (iconSize / 2) + 0.5))
+        increasePath.move(to: CGPoint(x: sliceWidth / 2 + 0.5 + sliceWidth * 2, y: (sliceHeight / 2) - (iconSize / 2) + 0.5))
+        increasePath.addLine(to: CGPoint(x: sliceWidth / 2 + 0.5 + sliceWidth * 2, y: (sliceHeight / 2) + (iconSize / 2) + 0.5))
         tintColor.setStroke()
         increasePath.stroke()
         
         // Create layer so that we can dynamically change its color when not enabled
-        increaseLayer.path = increasePath.CGPath
-        increaseLayer.strokeColor = tintColor.CGColor
+        increaseLayer.path = increasePath.cgPath
+        increaseLayer.strokeColor = tintColor.cgColor
         layer.addSublayer(increaseLayer)
         
         // Set initial buttons state
@@ -247,7 +251,7 @@ private enum Button: Int {
     
     // MARK: Control Events
     
-    func decrease(sender: UIButton) {
+    func decrease(_ sender: UIButton) {
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
         // If there is a timer, stop it before it overflows the minimum value.
         if let timer = continuousTimer {
@@ -256,7 +260,7 @@ private enum Button: Int {
         value -= stepValue
     }
     
-    func increase(sender: UIButton) {
+    func increase(_ sender: UIButton) {
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
         // If there is a timer, stop it before it overflows the maximum value.
         if let timer = continuousTimer {
@@ -265,25 +269,25 @@ private enum Button: Int {
         value += stepValue
     }
     
-    func continuousIncrement(timer: NSTimer) {
+    func continuousIncrement(_ timer: Timer) {
         // Check which one of the two buttons was continuously pressed
         let sender = timer.userInfo!["sender"] as! UIButton
-        if sender.tag == Button.Decrease.rawValue {
+        if sender.tag == Button.decrease.rawValue {
             value -= stepValue
         } else {
             value += stepValue
         }
     }
     
-    func selected(sender: UIButton) {
+    func selected(_ sender: UIButton) {
         // Start a timer to handle the continuous pressed case
         if autorepeat {
-            continuousTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(continuousIncrement), userInfo: ["sender" : sender], repeats: true)
+            continuousTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(continuousIncrement), userInfo: ["sender" : sender], repeats: true)
         }
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.1)
     }
     
-    func stopContinuous(sender: UIButton) {
+    func stopContinuous(_ sender: UIButton) {
         // When dragged outside, stop the timer.
         continuousTimer?.invalidate()
     }
@@ -292,32 +296,32 @@ private enum Button: Int {
     
     private func setState() {
         if value >= maximumValue {
-            increaseButton.enabled = false
-            increaseLayer.strokeColor = UIColor.grayColor().CGColor
+            increaseButton.isEnabled = false
+            increaseLayer.strokeColor = UIColor.gray.cgColor
             continuousTimer?.invalidate()
         } else if value <= minimumValue {
-            decreaseButton.enabled = false
-            decreaseLayer.strokeColor = UIColor.grayColor().CGColor
+            decreaseButton.isEnabled = false
+            decreaseLayer.strokeColor = UIColor.gray.cgColor
             continuousTimer?.invalidate()
         } else {
-            increaseButton.enabled = true
-            decreaseButton.enabled = true
-            increaseLayer.strokeColor = tintColor.CGColor
-            decreaseLayer.strokeColor = tintColor.CGColor
+            increaseButton.isEnabled = true
+            decreaseButton.isEnabled = true
+            increaseLayer.strokeColor = tintColor.cgColor
+            decreaseLayer.strokeColor = tintColor.cgColor
         }
     }
     
     // Display the value with the
-    private func setFormattedValue(value: Double) {
-        valueLabel.text = numberFormatter.stringFromNumber(value)
+    private func setFormattedValue(_ value: Double) {
+        valueLabel.text = numberFormatter.string(from: value)
     }
     
     // Update all the subviews tintColor properties.
     public override func tintColorDidChange() {
-        layer.borderColor = tintColor.CGColor
+        layer.borderColor = tintColor.cgColor
         valueLabel.textColor = tintColor
-        leftSeparator.strokeColor = tintColor.CGColor
-        rightSeparator.strokeColor = tintColor.CGColor
+        leftSeparator.strokeColor = tintColor.cgColor
+        rightSeparator.strokeColor = tintColor.cgColor
     }
     
 }
