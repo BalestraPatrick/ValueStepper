@@ -10,8 +10,8 @@ import UIKit
 
 /// Button tags
 ///
-/// - Decrease: Decrease button has tag 0.
-/// - Increase: Increase button has tag 1.
+/// - decrease: decrease button has tag 0.
+/// - increase: increase button has tag 1.
 private enum Button: Int {
     case decrease
     case increase
