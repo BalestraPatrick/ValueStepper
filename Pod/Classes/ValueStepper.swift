@@ -287,12 +287,13 @@ import UIKit
     
     // MARK: Actions
     
+    // Set correct state of the buttons (in case we reached the minimum or maximum value).
     private func setState() {
-        if value >= maximumValue {
+        if (value + stepValue) >= maximumValue {
             increaseButton.enabled = false
             increaseLayer.strokeColor = UIColor.grayColor().CGColor
             continuousTimer?.invalidate()
-        } else if value <= minimumValue {
+        } else if (value - stepValue) <= minimumValue {
             decreaseButton.enabled = false
             decreaseLayer.strokeColor = UIColor.grayColor().CGColor
             continuousTimer?.invalidate()
@@ -304,7 +305,7 @@ import UIKit
         }
     }
     
-    // Display the value with the
+    // Display the value with the correct format.
     private func setFormattedValue(value: Double) {
         valueLabel.text = numberFormatter.stringFromNumber(value)
     }

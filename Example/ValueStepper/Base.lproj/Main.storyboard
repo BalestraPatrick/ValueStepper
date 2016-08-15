@@ -86,16 +86,16 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="100"/>
+                                        <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                        <real key="value" value="101"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                        <real key="value" value="1000"/>
+                                        <integer key="value" value="1000"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
-                                        <real key="value" value="100"/>
+                                        <integer key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">

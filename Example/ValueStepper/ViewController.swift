@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         stepper3.numberFormatter = moneyFormatter
         
         stepper3.addTarget(self, action: #selector(ViewController.valueChanged3(_:)), forControlEvents: .ValueChanged)
+
     }
     
     @IBAction func valueChanged1(sender: ValueStepper) {
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
         print("Stepper 2: \(sender.value)")
     }
     
-    func valueChanged3(sender: ValueStepper) {
+    @IBAction func valueChanged3(sender: ValueStepper) {
         print("Stepper 3: \(sender.value)")
     }
 }
