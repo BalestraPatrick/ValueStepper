@@ -8,31 +8,9 @@
 
 import UIKit
 
-/// Button tags
-///
-/// - Decrease: Decrease button has tag 0.
-/// - Increase: Increase button has tag 1.
-private enum Button: Int {
-    case Decrease
-    case Increase
-}
-
 @IBDesignable public class ValueStepper: UIControl {
     
     // MARK - Public variables
-    
-    /// Current value and sends UIControlEventValueChanged when modified.
-    @IBInspectable public var value: Double = 0.0 {
-        didSet {
-            if value > maximumValue || value < minimumValue {
-               // Value is possibly out of range, it means we're setting up the values so discard any update to the UI.
-            } else if oldValue != value {
-                sendActionsForControlEvents(.ValueChanged)
-                setFormattedValue(value)
-                setState()
-            }
-        }
-    }
     
     /// Minimum value that must be the less than the maximum value.
     @IBInspectable public var minimumValue: Double = 0.0
@@ -52,7 +30,7 @@ private enum Button: Int {
         formatter.numberStyle = .DecimalStyle
         formatter.maximumFractionDigits = 2
         return formatter
-    }() {
+        }() {
         didSet {
             setFormattedValue(value)
         }
@@ -70,7 +48,6 @@ private enum Button: Int {
     private let decreaseButton: UIButton = {
         let button = UIButton(type: UIButtonType.Custom)
         button.backgroundColor = UIColor.clearColor()
-        button.tag = Button.Decrease.rawValue
         return button
     }()
     
@@ -78,7 +55,6 @@ private enum Button: Int {
     private let increaseButton: UIButton = {
         let button = UIButton(type: UIButtonType.Custom)
         button.backgroundColor = UIColor.clearColor()
-        button.tag = Button.Increase.rawValue
         return button
     }()
     
@@ -106,6 +82,18 @@ private enum Button: Int {
     
     // Timer used in case that autorepeat is true to change the value continuously.
     private var continuousTimer: NSTimer?
+    
+    /// Current value and sends UIControlEventValueChanged when modified.
+    public var value: Double = 0.0 {
+        
+        didSet {
+            if oldValue != value {
+                sendActionsForControlEvents(.ValueChanged)
+                setFormattedValue(value)
+                setState()
+            }
+        }
+    }
     
     // MARK: Initializers
     
@@ -249,29 +237,26 @@ private enum Button: Int {
     
     func decrease(sender: UIButton) {
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
-        // If there is a timer, stop it before it overflows the minimum value.
-        if let timer = continuousTimer {
-            timer.invalidate()
-        }
-        value -= stepValue
+        continuousTimer?.invalidate()
+        continuousTimer = nil
+        decreaseValue()
     }
     
     func increase(sender: UIButton) {
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
-        // If there is a timer, stop it before it overflows the maximum value.
-        if let timer = continuousTimer {
-            timer.invalidate()
-        }
-        value += stepValue
+        continuousTimer?.invalidate()
+        continuousTimer = nil
+        increaseValue()
     }
     
     func continuousIncrement(timer: NSTimer) {
         // Check which one of the two buttons was continuously pressed
-        let sender = timer.userInfo!["sender"] as! UIButton
-        if sender.tag == Button.Decrease.rawValue {
-            value -= stepValue
-        } else {
-            value += stepValue
+        if let button = timer.userInfo!["sender"] as? UIButton {
+            if button == decreaseButton {
+                decreaseValue()
+            } else {
+                increaseValue()
+            }
         }
     }
     
@@ -286,6 +271,18 @@ private enum Button: Int {
     func stopContinuous(sender: UIButton) {
         // When dragged outside, stop the timer.
         continuousTimer?.invalidate()
+    }
+    
+    func increaseValue() {
+        if value + stepValue <= maximumValue && value + stepValue >= minimumValue {
+            value += stepValue
+        }
+    }
+    
+    func decreaseValue() {
+        if value - stepValue <= maximumValue && value - stepValue >= minimumValue {
+            value -= stepValue
+        }
     }
     
     // MARK: Actions
