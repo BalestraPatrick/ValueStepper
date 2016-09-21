@@ -27,15 +27,15 @@ class ViewController: UIViewController {
         stepper3.addTarget(self, action: #selector(valueChanged3), for: .valueChanged)
     }
     
-    @IBAction func valueChanged1(sender: ValueStepper) {
+    @IBAction func valueChanged1(_ sender: ValueStepper) {
         print("Stepper 1: \(sender.value)")
     }
     
-    @IBAction func valueChanged2(sender: ValueStepper) {
+    @IBAction func valueChanged2(_ sender: ValueStepper) {
         print("Stepper 2: \(sender.value)")
     }
     
-    func valueChanged3(sender: ValueStepper) {
+    func valueChanged3(_ sender: ValueStepper) {
         print("Stepper 3: \(sender.value)")
     }
 }
