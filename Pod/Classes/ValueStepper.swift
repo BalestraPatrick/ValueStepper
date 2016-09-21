@@ -271,7 +271,9 @@ private enum Button: Int {
     
     func continuousIncrement(_ timer: Timer) {
         // Check which one of the two buttons was continuously pressed
-        let sender = timer.userInfo!["sender"] as! UIButton
+        let userInfo = timer.userInfo as! Dictionary<String, AnyObject>
+        guard let sender = userInfo["sender"] as? UIButton else { return }
+        
         if sender.tag == Button.decrease.rawValue {
             value -= stepValue
         } else {
@@ -313,7 +315,7 @@ private enum Button: Int {
     
     // Display the value with the
     private func setFormattedValue(_ value: Double) {
-        valueLabel.text = numberFormatter.string(from: value)
+        valueLabel.text = numberFormatter.string(from: NSNumber(value: value))
     }
     
     // Update all the subviews tintColor properties.
