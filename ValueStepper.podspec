@@ -8,14 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "ValueStepper"
-  s.version          = "0.8"
+  s.version          = "1.0"
   s.summary          = "A Stepper object that displays its value."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description      = "ValueStepper is an improved replication of Apple's UIStepper object. The problem with UIStepper is that it doesn't display the value to the user. I was tired of creating a simple UILabel just to show the value in the UI. ValueStepper integrates the value in a UILabel between the increase and decrease buttons. It's as easy as that."
 
   s.homepage         = "https://github.com/BalestraPatrick/ValueStepper"
