@@ -292,14 +292,17 @@ private enum Button: Int {
     }
     
     func increaseValue() {
-        if value + stepValue <= maximumValue && value + stepValue >= minimumValue {
-            value += stepValue
+        let roundedValue = value.rounded(digits: numberFormatter.maximumFractionDigits)
+        print(roundedValue)
+        if roundedValue + stepValue <= maximumValue && roundedValue + stepValue >= minimumValue {
+            value = roundedValue + stepValue
         }
     }
     
     func decreaseValue() {
-        if value - stepValue <= maximumValue && value - stepValue >= minimumValue {
-            value -= stepValue
+        let roundedValue = value.rounded(digits: numberFormatter.maximumFractionDigits)
+        if roundedValue - stepValue <= maximumValue && roundedValue - stepValue >= minimumValue {
+            value = roundedValue - stepValue
         }
     }
     
@@ -336,4 +339,13 @@ private enum Button: Int {
         rightSeparator.strokeColor = tintColor.cgColor
     }
     
+}
+
+extension Double {
+
+    /// Rounds a double to `digits` decimal places.
+    func rounded(digits: Int) -> Double {
+        let behavior = NSDecimalNumberHandler(roundingMode: NSDecimalNumber.RoundingMode.bankers, scale: Int16(digits), raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: true)
+        return NSDecimalNumber(value: self).rounding(accordingToBehavior: behavior).doubleValue
+    }
 }
