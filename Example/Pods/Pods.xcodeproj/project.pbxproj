@@ -7,121 +7,169 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06258F9E1009A512BDD922DAECC669F3 /* Pods-ValueStepper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BFD69F8C87F3A3FC9C61201D53208F /* Pods-ValueStepper_Example-dummy.m */; };
-		295901A96B2B5B9D8B7200FB7CD7146E /* Pods-ValueStepper_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CBFFDD088381CE2A8B364C71DA4150 /* Pods-ValueStepper_Tests-dummy.m */; };
-		320A2C86ABE11B3B70A5DE97EF6F191C /* Pods-ValueStepper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C39338F11AE4ADE6ACABAB0837646947 /* Pods-ValueStepper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D3F80910F5D686BEBE2F501F1490DB6 /* Pods-ValueStepper_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 837753255955E08F3A0DDB1BA6974423 /* Pods-ValueStepper_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		658FCA1EC479C05DB6D1FF3571F25843 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		6EAF1A98F91EF7F0CEF72E63E15E49D1 /* ValueStepper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0063D2DCC0DC06BC982602C11EA0A22A /* ValueStepper-dummy.m */; };
-		955781FD5032A45E5A1B784306A39AF8 /* ValueStepper.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0CAA9C00D2F864DC13B80297E70795A8 /* ValueStepper.bundle */; };
-		C85E75AC5E61213064183D1CDEA51E72 /* ValueStepper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C2DBBA201EF4DFCA534EC3C8C7652E /* ValueStepper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C900A332DA29660D2D2DDC6B48664338 /* ValueStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76412E305E588641541AD48E59DA0526 /* ValueStepper.swift */; };
-		EE10FD118280B4E3B4F44AD26F95935C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		FDD567235A3A7E26EACED956785C4C38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		02DA31794176C1084276C4263CBEAD3F /* ValueStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EA801028663B6A48CC7B6E0F8551B /* ValueStepper.swift */; };
+		0C2A56ADCA5F86E6EF143C5BE8A68ED0 /* ValueStepper-iOS8.3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55FD798A005E3FE8EC1BE5B15A9183D4 /* ValueStepper-iOS8.3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		128E55E8353A5A1C0D92B8A86D7C975F /* ValueStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EA801028663B6A48CC7B6E0F8551B /* ValueStepper.swift */; };
+		4654ADA3AD62285671F2C8A8FD510E91 /* ValueStepper-iOS10.2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CD7FEDC3AE5ABAD0F3863695A3A87 /* ValueStepper-iOS10.2-dummy.m */; };
+		493537CF84C7F51699416738C6A51DAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		5F6432799410AA42C6A6EC1CE17EE50B /* ValueStepper-iOS10.2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15200EB228AAF9B2C5CF72B8F5442769 /* ValueStepper-iOS10.2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62F453C404054408CA4728ED1EA5B145 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		78D04E2080A52D0DCF1A2BF0062E876F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		953677DF490800E541A02E6DD6CEEC7A /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98FEA1DBA3C65B2509A25E6122C849 /* Pods-Tests-dummy.m */; };
+		B15B2872FE6D24B4009975BEE394D69F /* Pods-ValueStepper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C11880C3B6676344A0674A0C05CDAC /* Pods-ValueStepper_Example-dummy.m */; };
+		C6D8BB659F811A881F08FDC56688E201 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		E67CCC5B3EBB589CEE88EBE439370AC9 /* Pods-Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED672DB89573C4A6415BCAC301ED42AB /* Pods-Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8A63F0BD263A44E3ABAC526249433C7 /* ValueStepper-iOS8.3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FB5790AFF7111002A276AE5ECD85C3 /* ValueStepper-iOS8.3-dummy.m */; };
+		EA862C3A868C0B98C5381549C64DA5D9 /* Pods-ValueStepper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E979B5FC26B5843A59448CFE0A2BEB35 /* Pods-ValueStepper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		430EFB0C6DADD93265B4D81059970B98 /* PBXContainerItemProxy */ = {
+		1106F1C3C3950E33106850C96D6DA192 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 976CCE640C997915AA555BE223C15789;
-			remoteInfo = "ValueStepper-ValueStepper";
+			remoteGlobalIDString = BFB295FF68E1C24844C019E171B6DD07;
+			remoteInfo = "ValueStepper-iOS8.3";
 		};
-		6FB44561C321DE1575DB4E805CBE6CE3 /* PBXContainerItemProxy */ = {
+		DA3B9671284E826B929A175B51BBC7F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0A5188DEEB6699012E14F9E482479DDA;
-			remoteInfo = ValueStepper;
-		};
-		79292B566BB15574A56F10F2D652F279 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0A5188DEEB6699012E14F9E482479DDA;
-			remoteInfo = ValueStepper;
+			remoteGlobalIDString = 222904431EC0CF499451FEA3A5CF8B06;
+			remoteInfo = "ValueStepper-iOS10.2";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		003F43C2AD469B544CC855D0FDBC086F /* Pods-ValueStepper_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ValueStepper_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		0063D2DCC0DC06BC982602C11EA0A22A /* ValueStepper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ValueStepper-dummy.m"; sourceTree = "<group>"; };
-		09BE890C92CAC5B4992E0818836872B3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CAA9C00D2F864DC13B80297E70795A8 /* ValueStepper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValueStepper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EF3F0A5407E12FB73C97C6DCE8146D2 /* ValueStepper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ValueStepper.xcconfig; sourceTree = "<group>"; };
-		0F040AF739C7F238FAF1BB6301BB8018 /* Pods-ValueStepper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValueStepper_Example-resources.sh"; sourceTree = "<group>"; };
-		1AADCB927D9B33DDC10A7B988B509DB1 /* Pods-ValueStepper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValueStepper_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		20DDE6A38CA961AFAF7158811154B8C4 /* Pods-ValueStepper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ValueStepper_Example.modulemap"; sourceTree = "<group>"; };
-		25A5566FCBDFAD22CF2CA25EDB5E2A47 /* ValueStepper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ValueStepper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BA8349D7ABC0ADDC526B16BA076B645 /* Pods_ValueStepper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValueStepper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		33BFD69F8C87F3A3FC9C61201D53208F /* Pods-ValueStepper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ValueStepper_Example-dummy.m"; sourceTree = "<group>"; };
-		39CBFFDD088381CE2A8B364C71DA4150 /* Pods-ValueStepper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ValueStepper_Tests-dummy.m"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		46FD75F47DC3BFF7780D00C31516DC64 /* Pods-ValueStepper_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValueStepper_Example-frameworks.sh"; sourceTree = "<group>"; };
-		48C2DBBA201EF4DFCA534EC3C8C7652E /* ValueStepper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueStepper-umbrella.h"; sourceTree = "<group>"; };
-		5B01A32202C3CF9C0B04D0CE3F0733D6 /* Pods_ValueStepper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValueStepper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C981C9F55FCA7791A0BB99CF0875E6E /* ValueStepper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueStepper-prefix.pch"; sourceTree = "<group>"; };
-		5D6EBEA955CE2BA36223403AFDE721FA /* Pods-ValueStepper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ValueStepper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		638A9FDE63FADCFF18F1C91618455D16 /* Pods-ValueStepper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValueStepper_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6D625998D2E70C3C948D3343B6C85568 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76412E305E588641541AD48E59DA0526 /* ValueStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ValueStepper.swift; sourceTree = "<group>"; };
-		82B3A8A2E9A077F60378F1C7B1FEB2F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		837753255955E08F3A0DDB1BA6974423 /* Pods-ValueStepper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ValueStepper_Tests-umbrella.h"; sourceTree = "<group>"; };
-		849FF3AE3D5040B81820E47DF6DFF111 /* Pods-ValueStepper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValueStepper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		96954065DAFCC21860052137D93312E6 /* Pods-ValueStepper_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ValueStepper_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9E30E0D4C13FE6328B91547815D35B84 /* ValueStepper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ValueStepper.modulemap; sourceTree = "<group>"; };
-		A258115D910FFF7D1ED93CD7FFA1BA7E /* Pods-ValueStepper_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ValueStepper_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B19BC06E14AF3788589258143DBA736E /* Pods-ValueStepper_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ValueStepper_Tests.modulemap"; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C39338F11AE4ADE6ACABAB0837646947 /* Pods-ValueStepper_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ValueStepper_Example-umbrella.h"; sourceTree = "<group>"; };
-		DAD6FCBEC5AC41D3FA10F112DF654A91 /* Pods-ValueStepper_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValueStepper_Tests-resources.sh"; sourceTree = "<group>"; };
-		E2D4E203B492E36BB5642842C3A7667A /* Pods-ValueStepper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValueStepper_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		FEDB37E670A93D13DFF8CFF8AC3513F7 /* Pods-ValueStepper_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValueStepper_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		0E08EB550202C139C5B49C3D9431F15F /* Pods-ValueStepper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ValueStepper_Example.modulemap"; sourceTree = "<group>"; };
+		0F065E3C3CD7345575D27DC2075B51A8 /* ValueStepper-iOS10.2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ValueStepper-iOS10.2.xcconfig"; sourceTree = "<group>"; };
+		125207433955A6DA6DD264E75DA156F3 /* Pods-ValueStepper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValueStepper_Example-resources.sh"; sourceTree = "<group>"; };
+		15200EB228AAF9B2C5CF72B8F5442769 /* ValueStepper-iOS10.2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueStepper-iOS10.2-umbrella.h"; sourceTree = "<group>"; };
+		1D8CD7FEDC3AE5ABAD0F3863695A3A87 /* ValueStepper-iOS10.2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ValueStepper-iOS10.2-dummy.m"; sourceTree = "<group>"; };
+		24918EFF67631DC05F7EAB2C62F15919 /* ValueStepper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ValueStepper.framework; path = "ValueStepper-iOS10.2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D38E764CDEAB4A80EE7DB84D9B7A16A /* Pods-ValueStepper_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ValueStepper_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		366BC7B4C96D5CAFD330DB6E832C7A2D /* ValueStepper-iOS8.3-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ValueStepper-iOS8.3-prefix.pch"; path = "../ValueStepper-iOS8.3/ValueStepper-iOS8.3-prefix.pch"; sourceTree = "<group>"; };
+		3759781E8BA619307E342E1E9FD4BACD /* ValueStepper-iOS8.3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "ValueStepper-iOS8.3.modulemap"; path = "../ValueStepper-iOS8.3/ValueStepper-iOS8.3.modulemap"; sourceTree = "<group>"; };
+		3EF56359BACCCFF61AFE476780555341 /* Pods-ValueStepper_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ValueStepper_Example-frameworks.sh"; sourceTree = "<group>"; };
+		491621CB3AF684E1C7E199D93D0AAEC1 /* Pods-Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-frameworks.sh"; sourceTree = "<group>"; };
+		55FD798A005E3FE8EC1BE5B15A9183D4 /* ValueStepper-iOS8.3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ValueStepper-iOS8.3-umbrella.h"; path = "../ValueStepper-iOS8.3/ValueStepper-iOS8.3-umbrella.h"; sourceTree = "<group>"; };
+		6E1EE7AF268DBD7613767ECAE7BED645 /* ValueStepper-iOS8.3.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "ValueStepper-iOS8.3.xcconfig"; path = "../ValueStepper-iOS8.3/ValueStepper-iOS8.3.xcconfig"; sourceTree = "<group>"; };
+		71EE74C76A98C2D8E4928DAB4D95DED4 /* Pods-ValueStepper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValueStepper_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		72C11880C3B6676344A0674A0C05CDAC /* Pods-ValueStepper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ValueStepper_Example-dummy.m"; sourceTree = "<group>"; };
+		7C68A14E7528C1154CFFB1B7D83916D6 /* Pods-ValueStepper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ValueStepper_Example.release.xcconfig"; sourceTree = "<group>"; };
+		873AC0A9080393CDF75EDB1B0642C667 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90BD3ACB240EEE2FFE8D0F9EEF312B2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B3B6089362F5180E327E98FA2EC8A8D /* ValueStepper-iOS10.2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ValueStepper-iOS10.2-prefix.pch"; sourceTree = "<group>"; };
+		A72EA801028663B6A48CC7B6E0F8551B /* ValueStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ValueStepper.swift; sourceTree = "<group>"; };
+		B3FB5790AFF7111002A276AE5ECD85C3 /* ValueStepper-iOS8.3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ValueStepper-iOS8.3-dummy.m"; path = "../ValueStepper-iOS8.3/ValueStepper-iOS8.3-dummy.m"; sourceTree = "<group>"; };
+		B7C8EC9B36C75AE059F62CA8F4387B14 /* ValueStepper-iOS10.2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "ValueStepper-iOS10.2.modulemap"; sourceTree = "<group>"; };
+		C19440D00AA194880C9CBA53296C0224 /* Pods-ValueStepper_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ValueStepper_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D1D385624A8BAAE3EC06D72989E2A65C /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DAD8D48C87B220E76D40FF343E0EEF50 /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DB98FEA1DBA3C65B2509A25E6122C849 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
+		E0C5E9C6CE8FB0A55AA3DBBC0FF8A9AF /* ValueStepper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ValueStepper.framework; path = "ValueStepper-iOS8.3.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E268388AF9EF0714ED92E71819A67CEE /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E4D45F53F6313EB55A9DD06BFD80B143 /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E55CAD5151F51D804CA8C858E17AE060 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E979B5FC26B5843A59448CFE0A2BEB35 /* Pods-ValueStepper_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ValueStepper_Example-umbrella.h"; sourceTree = "<group>"; };
+		EBB62B093FCFF8329740A3BB2319AB63 /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
+		ED672DB89573C4A6415BCAC301ED42AB /* Pods-Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-umbrella.h"; sourceTree = "<group>"; };
+		EFC28A655B9E089761A2853CF1EE16E3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../ValueStepper-iOS8.3/Info.plist"; sourceTree = "<group>"; };
+		F19E142573EF8B60AF97BF9C3F710048 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests.framework; path = "Pods-Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F45C96D541F02B7BF5DA63A844EBE759 /* Pods-Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Tests.modulemap"; sourceTree = "<group>"; };
+		F903B534B750410C5D780DAB10E17841 /* Pods_ValueStepper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ValueStepper_Example.framework; path = "Pods-ValueStepper_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3AD33DBB21413444E7641E78E4B52101 /* Frameworks */ = {
+		420322DC68CBF829A7397986AA2B9D30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D04E2080A52D0DCF1A2BF0062E876F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		792218CBC7F6C82A15D219BEED5229C1 /* Frameworks */ = {
+		7C654B558F71C31D6D5686E08371F3AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				658FCA1EC479C05DB6D1FF3571F25843 /* Foundation.framework in Frameworks */,
+				493537CF84C7F51699416738C6A51DAC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C29B989C4095D73F4184193E5FDDB5E4 /* Frameworks */ = {
+		8D94A3C6EF48AC955B41C35DD52BF5C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE10FD118280B4E3B4F44AD26F95935C /* Foundation.framework in Frameworks */,
+				62F453C404054408CA4728ED1EA5B145 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C57896AB98D6277950AEC5F9B575A8C4 /* Frameworks */ = {
+		B934744A94283B7D8DD67C69F2B2AF16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD567235A3A7E26EACED956785C4C38 /* Foundation.framework in Frameworks */,
+				C6D8BB659F811A881F08FDC56688E201 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B35DAE8B8BE3C049D6E49F08726528B /* Products */ = {
+		025000380B6B11BEBFB4936D9B082308 /* Pods-ValueStepper_Example */ = {
 			isa = PBXGroup;
 			children = (
-				5B01A32202C3CF9C0B04D0CE3F0733D6 /* Pods_ValueStepper_Example.framework */,
-				2BA8349D7ABC0ADDC526B16BA076B645 /* Pods_ValueStepper_Tests.framework */,
-				0CAA9C00D2F864DC13B80297E70795A8 /* ValueStepper.bundle */,
-				25A5566FCBDFAD22CF2CA25EDB5E2A47 /* ValueStepper.framework */,
+				90BD3ACB240EEE2FFE8D0F9EEF312B2C /* Info.plist */,
+				0E08EB550202C139C5B49C3D9431F15F /* Pods-ValueStepper_Example.modulemap */,
+				2D38E764CDEAB4A80EE7DB84D9B7A16A /* Pods-ValueStepper_Example-acknowledgements.markdown */,
+				C19440D00AA194880C9CBA53296C0224 /* Pods-ValueStepper_Example-acknowledgements.plist */,
+				72C11880C3B6676344A0674A0C05CDAC /* Pods-ValueStepper_Example-dummy.m */,
+				3EF56359BACCCFF61AFE476780555341 /* Pods-ValueStepper_Example-frameworks.sh */,
+				125207433955A6DA6DD264E75DA156F3 /* Pods-ValueStepper_Example-resources.sh */,
+				E979B5FC26B5843A59448CFE0A2BEB35 /* Pods-ValueStepper_Example-umbrella.h */,
+				71EE74C76A98C2D8E4928DAB4D95DED4 /* Pods-ValueStepper_Example.debug.xcconfig */,
+				7C68A14E7528C1154CFFB1B7D83916D6 /* Pods-ValueStepper_Example.release.xcconfig */,
+			);
+			name = "Pods-ValueStepper_Example";
+			path = "Target Support Files/Pods-ValueStepper_Example";
+			sourceTree = "<group>";
+		};
+		0C9011238DFADCBBC9DCB6ABB5FA6402 /* Pods-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				873AC0A9080393CDF75EDB1B0642C667 /* Info.plist */,
+				F45C96D541F02B7BF5DA63A844EBE759 /* Pods-Tests.modulemap */,
+				E4D45F53F6313EB55A9DD06BFD80B143 /* Pods-Tests-acknowledgements.markdown */,
+				DAD8D48C87B220E76D40FF343E0EEF50 /* Pods-Tests-acknowledgements.plist */,
+				DB98FEA1DBA3C65B2509A25E6122C849 /* Pods-Tests-dummy.m */,
+				491621CB3AF684E1C7E199D93D0AAEC1 /* Pods-Tests-frameworks.sh */,
+				EBB62B093FCFF8329740A3BB2319AB63 /* Pods-Tests-resources.sh */,
+				ED672DB89573C4A6415BCAC301ED42AB /* Pods-Tests-umbrella.h */,
+				D1D385624A8BAAE3EC06D72989E2A65C /* Pods-Tests.debug.xcconfig */,
+				E268388AF9EF0714ED92E71819A67CEE /* Pods-Tests.release.xcconfig */,
+			);
+			name = "Pods-Tests";
+			path = "Target Support Files/Pods-Tests";
+			sourceTree = "<group>";
+		};
+		132D456A57C7B4C19CF01880CE4F3CB8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C9011238DFADCBBC9DCB6ABB5FA6402 /* Pods-Tests */,
+				025000380B6B11BEBFB4936D9B082308 /* Pods-ValueStepper_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2001C6C42D95A6CBD9B6D0A2BE2C1910 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F19E142573EF8B60AF97BF9C3F710048 /* Pods_Tests.framework */,
+				F903B534B750410C5D780DAB10E17841 /* Pods_ValueStepper_Example.framework */,
+				E0C5E9C6CE8FB0A55AA3DBBC0FF8A9AF /* ValueStepper.framework */,
+				24918EFF67631DC05F7EAB2C62F15919 /* ValueStepper.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,224 +177,193 @@
 		30D58A60605856F6035CA26AE32F3F15 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E54937A1980434195C33AADC3A166D23 /* ValueStepper */,
+				57DED23FA1F46136B016B0999B1299CA /* ValueStepper */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		4EDEB811FB1CD591EB4D71221DBD4FD8 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				30D58A60605856F6035CA26AE32F3F15 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				1B35DAE8B8BE3C049D6E49F08726528B /* Products */,
-				98BF21083D3EEBE855FF7DD282B4A160 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		809D3DF5E345C8EFCEE974B7C6032A34 /* Pods-ValueStepper_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				09BE890C92CAC5B4992E0818836872B3 /* Info.plist */,
-				B19BC06E14AF3788589258143DBA736E /* Pods-ValueStepper_Tests.modulemap */,
-				5D6EBEA955CE2BA36223403AFDE721FA /* Pods-ValueStepper_Tests-acknowledgements.markdown */,
-				003F43C2AD469B544CC855D0FDBC086F /* Pods-ValueStepper_Tests-acknowledgements.plist */,
-				39CBFFDD088381CE2A8B364C71DA4150 /* Pods-ValueStepper_Tests-dummy.m */,
-				FEDB37E670A93D13DFF8CFF8AC3513F7 /* Pods-ValueStepper_Tests-frameworks.sh */,
-				DAD6FCBEC5AC41D3FA10F112DF654A91 /* Pods-ValueStepper_Tests-resources.sh */,
-				837753255955E08F3A0DDB1BA6974423 /* Pods-ValueStepper_Tests-umbrella.h */,
-				849FF3AE3D5040B81820E47DF6DFF111 /* Pods-ValueStepper_Tests.debug.xcconfig */,
-				1AADCB927D9B33DDC10A7B988B509DB1 /* Pods-ValueStepper_Tests.release.xcconfig */,
-			);
-			name = "Pods-ValueStepper_Tests";
-			path = "Target Support Files/Pods-ValueStepper_Tests";
-			sourceTree = "<group>";
-		};
-		8E8148B49AB501C3AC03AE48E5871510 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				C2FA6ED1C871CE9D373DB2B43175AC75 /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		98BF21083D3EEBE855FF7DD282B4A160 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AFEDA7CD7E787AF255AD6B3964F8F4B7 /* Pods-ValueStepper_Example */,
-				809D3DF5E345C8EFCEE974B7C6032A34 /* Pods-ValueStepper_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		AFEDA7CD7E787AF255AD6B3964F8F4B7 /* Pods-ValueStepper_Example */ = {
-			isa = PBXGroup;
-			children = (
-				82B3A8A2E9A077F60378F1C7B1FEB2F0 /* Info.plist */,
-				20DDE6A38CA961AFAF7158811154B8C4 /* Pods-ValueStepper_Example.modulemap */,
-				A258115D910FFF7D1ED93CD7FFA1BA7E /* Pods-ValueStepper_Example-acknowledgements.markdown */,
-				96954065DAFCC21860052137D93312E6 /* Pods-ValueStepper_Example-acknowledgements.plist */,
-				33BFD69F8C87F3A3FC9C61201D53208F /* Pods-ValueStepper_Example-dummy.m */,
-				46FD75F47DC3BFF7780D00C31516DC64 /* Pods-ValueStepper_Example-frameworks.sh */,
-				0F040AF739C7F238FAF1BB6301BB8018 /* Pods-ValueStepper_Example-resources.sh */,
-				C39338F11AE4ADE6ACABAB0837646947 /* Pods-ValueStepper_Example-umbrella.h */,
-				E2D4E203B492E36BB5642842C3A7667A /* Pods-ValueStepper_Example.debug.xcconfig */,
-				638A9FDE63FADCFF18F1C91618455D16 /* Pods-ValueStepper_Example.release.xcconfig */,
-			);
-			name = "Pods-ValueStepper_Example";
-			path = "Target Support Files/Pods-ValueStepper_Example";
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		C2FA6ED1C871CE9D373DB2B43175AC75 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				76412E305E588641541AD48E59DA0526 /* ValueStepper.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		DBA1C1768EC0EC3D6F1AFAB496881969 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6D625998D2E70C3C948D3343B6C85568 /* Info.plist */,
-				9E30E0D4C13FE6328B91547815D35B84 /* ValueStepper.modulemap */,
-				0EF3F0A5407E12FB73C97C6DCE8146D2 /* ValueStepper.xcconfig */,
-				0063D2DCC0DC06BC982602C11EA0A22A /* ValueStepper-dummy.m */,
-				5C981C9F55FCA7791A0BB99CF0875E6E /* ValueStepper-prefix.pch */,
-				48C2DBBA201EF4DFCA534EC3C8C7652E /* ValueStepper-umbrella.h */,
+				EFC28A655B9E089761A2853CF1EE16E3 /* Info.plist */,
+				E55CAD5151F51D804CA8C858E17AE060 /* Info.plist */,
+				B7C8EC9B36C75AE059F62CA8F4387B14 /* ValueStepper-iOS10.2.modulemap */,
+				0F065E3C3CD7345575D27DC2075B51A8 /* ValueStepper-iOS10.2.xcconfig */,
+				1D8CD7FEDC3AE5ABAD0F3863695A3A87 /* ValueStepper-iOS10.2-dummy.m */,
+				9B3B6089362F5180E327E98FA2EC8A8D /* ValueStepper-iOS10.2-prefix.pch */,
+				15200EB228AAF9B2C5CF72B8F5442769 /* ValueStepper-iOS10.2-umbrella.h */,
+				3759781E8BA619307E342E1E9FD4BACD /* ValueStepper-iOS8.3.modulemap */,
+				6E1EE7AF268DBD7613767ECAE7BED645 /* ValueStepper-iOS8.3.xcconfig */,
+				B3FB5790AFF7111002A276AE5ECD85C3 /* ValueStepper-iOS8.3-dummy.m */,
+				366BC7B4C96D5CAFD330DB6E832C7A2D /* ValueStepper-iOS8.3-prefix.pch */,
+				55FD798A005E3FE8EC1BE5B15A9183D4 /* ValueStepper-iOS8.3-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ValueStepper";
+			path = "Example/Pods/Target Support Files/ValueStepper-iOS10.2";
 			sourceTree = "<group>";
 		};
-		E54937A1980434195C33AADC3A166D23 /* ValueStepper */ = {
+		57DED23FA1F46136B016B0999B1299CA /* ValueStepper */ = {
 			isa = PBXGroup;
 			children = (
-				8E8148B49AB501C3AC03AE48E5871510 /* Pod */,
-				DBA1C1768EC0EC3D6F1AFAB496881969 /* Support Files */,
+				EDBB636C02E7062EF1A1DB578F7FEBE6 /* Pod */,
+				4EDEB811FB1CD591EB4D71221DBD4FD8 /* Support Files */,
 			);
 			name = ValueStepper;
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		6EFB4145BCD16FA1F1E5CC5C1DDE1BEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A72EA801028663B6A48CC7B6E0F8551B /* ValueStepper.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				30D58A60605856F6035CA26AE32F3F15 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				2001C6C42D95A6CBD9B6D0A2BE2C1910 /* Products */,
+				132D456A57C7B4C19CF01880CE4F3CB8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDBB636C02E7062EF1A1DB578F7FEBE6 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6EFB4145BCD16FA1F1E5CC5C1DDE1BEA /* Classes */,
+			);
+			name = Pod;
+			path = Pod;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0FD5226465F4613EEB83C2DB8DADEEC0 /* Headers */ = {
+		151722865F9BFCC2638B906EF3D6F120 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D3F80910F5D686BEBE2F501F1490DB6 /* Pods-ValueStepper_Tests-umbrella.h in Headers */,
+				0C2A56ADCA5F86E6EF143C5BE8A68ED0 /* ValueStepper-iOS8.3-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7531E0E272049D505DE94D94524AD183 /* Headers */ = {
+		65239A97C5897DDA94EEA14A1F3E6653 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C85E75AC5E61213064183D1CDEA51E72 /* ValueStepper-umbrella.h in Headers */,
+				E67CCC5B3EBB589CEE88EBE439370AC9 /* Pods-Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAB3FF389CB8C2C453DA943CC5FB3582 /* Headers */ = {
+		AA72272040A0EEFFAB16720FDF896B3E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				320A2C86ABE11B3B70A5DE97EF6F191C /* Pods-ValueStepper_Example-umbrella.h in Headers */,
+				5F6432799410AA42C6A6EC1CE17EE50B /* ValueStepper-iOS10.2-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52C13D5EE604BCE9B917E1A90630C37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA862C3A868C0B98C5381549C64DA5D9 /* Pods-ValueStepper_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0A5188DEEB6699012E14F9E482479DDA /* ValueStepper */ = {
+		222904431EC0CF499451FEA3A5CF8B06 /* ValueStepper-iOS10.2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 664E7B5D5F4AAE304408590418F6785A /* Build configuration list for PBXNativeTarget "ValueStepper" */;
+			buildConfigurationList = 2DE56D6FED61A46B7790200E0E6FAE6C /* Build configuration list for PBXNativeTarget "ValueStepper-iOS10.2" */;
 			buildPhases = (
-				8EEEDB3E0ECFB4ECDC8925397FDB20FE /* Sources */,
-				C57896AB98D6277950AEC5F9B575A8C4 /* Frameworks */,
-				2456DE5E1058E8A3022B7EEBD8C5E41F /* Resources */,
-				7531E0E272049D505DE94D94524AD183 /* Headers */,
+				99604372B9343C3B2ED312D2435A358E /* Sources */,
+				420322DC68CBF829A7397986AA2B9D30 /* Frameworks */,
+				AA72272040A0EEFFAB16720FDF896B3E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				635BFA0A91537AE13206FE69DFF2B23A /* PBXTargetDependency */,
 			);
-			name = ValueStepper;
-			productName = ValueStepper;
-			productReference = 25A5566FCBDFAD22CF2CA25EDB5E2A47 /* ValueStepper.framework */;
+			name = "ValueStepper-iOS10.2";
+			productName = "ValueStepper-iOS10.2";
+			productReference = 24918EFF67631DC05F7EAB2C62F15919 /* ValueStepper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4E0C9E1AD3D0F2C9F1EC2AB118845EF4 /* Pods-ValueStepper_Example */ = {
+		8558BC7143EAB44AB57C9A258A79B8AD /* Pods-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09339610B2D1CA3CFC1BFB286238DB1D /* Build configuration list for PBXNativeTarget "Pods-ValueStepper_Example" */;
+			buildConfigurationList = 1D386A979D413168462C28C0B3E3472D /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
 			buildPhases = (
-				829D553A206F1F796A3F185AE78E32B1 /* Sources */,
-				C29B989C4095D73F4184193E5FDDB5E4 /* Frameworks */,
-				BAB3FF389CB8C2C453DA943CC5FB3582 /* Headers */,
+				9E9DE21A777F42CF5B31449B9609FB89 /* Sources */,
+				7C654B558F71C31D6D5686E08371F3AB /* Frameworks */,
+				65239A97C5897DDA94EEA14A1F3E6653 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				922863DDDAF9EAADEE2123C1265A838D /* PBXTargetDependency */,
+				CA7ADC07C960538A4DCE1B28F396A6E7 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests";
+			productName = "Pods-Tests";
+			productReference = F19E142573EF8B60AF97BF9C3F710048 /* Pods_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BFB295FF68E1C24844C019E171B6DD07 /* ValueStepper-iOS8.3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF647B99D61E5AB378C6623C6E6B8B44 /* Build configuration list for PBXNativeTarget "ValueStepper-iOS8.3" */;
+			buildPhases = (
+				6458F20C68897BE76C908BB9DE398BE8 /* Sources */,
+				B934744A94283B7D8DD67C69F2B2AF16 /* Frameworks */,
+				151722865F9BFCC2638B906EF3D6F120 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ValueStepper-iOS8.3";
+			productName = "ValueStepper-iOS8.3";
+			productReference = E0C5E9C6CE8FB0A55AA3DBBC0FF8A9AF /* ValueStepper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C3F6B3D4A492D4DFFAAE32688833C388 /* Pods-ValueStepper_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46DB9895A50C4594C7DF1100C4B4E133 /* Build configuration list for PBXNativeTarget "Pods-ValueStepper_Example" */;
+			buildPhases = (
+				1CE1578EA757BCB739D8CA839E696AF2 /* Sources */,
+				8D94A3C6EF48AC955B41C35DD52BF5C4 /* Frameworks */,
+				C52C13D5EE604BCE9B917E1A90630C37 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22DC4A3F002A2641B0453F99E97AEFAC /* PBXTargetDependency */,
 			);
 			name = "Pods-ValueStepper_Example";
 			productName = "Pods-ValueStepper_Example";
-			productReference = 5B01A32202C3CF9C0B04D0CE3F0733D6 /* Pods_ValueStepper_Example.framework */;
+			productReference = F903B534B750410C5D780DAB10E17841 /* Pods_ValueStepper_Example.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		7BBE59D68994360EE6B23A6BB44ECC57 /* Pods-ValueStepper_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CCCBCF74E2AF1DCD32680B98C645A443 /* Build configuration list for PBXNativeTarget "Pods-ValueStepper_Tests" */;
-			buildPhases = (
-				249861A699534F06FF46D65C038D7AB1 /* Sources */,
-				792218CBC7F6C82A15D219BEED5229C1 /* Frameworks */,
-				0FD5226465F4613EEB83C2DB8DADEEC0 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A3056DFBFC623EDE9902DE07CB0F2649 /* PBXTargetDependency */,
-			);
-			name = "Pods-ValueStepper_Tests";
-			productName = "Pods-ValueStepper_Tests";
-			productReference = 2BA8349D7ABC0ADDC526B16BA076B645 /* Pods_ValueStepper_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		976CCE640C997915AA555BE223C15789 /* ValueStepper-ValueStepper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 425310634731C1D5065D7F5BD0EA574B /* Build configuration list for PBXNativeTarget "ValueStepper-ValueStepper" */;
-			buildPhases = (
-				53951067B94830C398F83971A0CE9A98 /* Sources */,
-				3AD33DBB21413444E7641E78E4B52101 /* Frameworks */,
-				5A7A2EF0CC8F5CF44DE42226AFD29BBF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ValueStepper-ValueStepper";
-			productName = "ValueStepper-ValueStepper";
-			productReference = 0CAA9C00D2F864DC13B80297E70795A8 /* ValueStepper.bundle */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -354,19 +371,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					0A5188DEEB6699012E14F9E482479DDA = {
-						LastSwiftMigration = 0800;
-					};
-					4E0C9E1AD3D0F2C9F1EC2AB118845EF4 = {
-						LastSwiftMigration = 0800;
-					};
-					7BBE59D68994360EE6B23A6BB44ECC57 = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -376,150 +382,154 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 1B35DAE8B8BE3C049D6E49F08726528B /* Products */;
+			productRefGroup = 2001C6C42D95A6CBD9B6D0A2BE2C1910 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E0C9E1AD3D0F2C9F1EC2AB118845EF4 /* Pods-ValueStepper_Example */,
-				7BBE59D68994360EE6B23A6BB44ECC57 /* Pods-ValueStepper_Tests */,
-				0A5188DEEB6699012E14F9E482479DDA /* ValueStepper */,
-				976CCE640C997915AA555BE223C15789 /* ValueStepper-ValueStepper */,
+				8558BC7143EAB44AB57C9A258A79B8AD /* Pods-Tests */,
+				C3F6B3D4A492D4DFFAAE32688833C388 /* Pods-ValueStepper_Example */,
+				222904431EC0CF499451FEA3A5CF8B06 /* ValueStepper-iOS10.2 */,
+				BFB295FF68E1C24844C019E171B6DD07 /* ValueStepper-iOS8.3 */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		2456DE5E1058E8A3022B7EEBD8C5E41F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				955781FD5032A45E5A1B784306A39AF8 /* ValueStepper.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5A7A2EF0CC8F5CF44DE42226AFD29BBF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		249861A699534F06FF46D65C038D7AB1 /* Sources */ = {
+		1CE1578EA757BCB739D8CA839E696AF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				295901A96B2B5B9D8B7200FB7CD7146E /* Pods-ValueStepper_Tests-dummy.m in Sources */,
+				B15B2872FE6D24B4009975BEE394D69F /* Pods-ValueStepper_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53951067B94830C398F83971A0CE9A98 /* Sources */ = {
+		6458F20C68897BE76C908BB9DE398BE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8A63F0BD263A44E3ABAC526249433C7 /* ValueStepper-iOS8.3-dummy.m in Sources */,
+				128E55E8353A5A1C0D92B8A86D7C975F /* ValueStepper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		829D553A206F1F796A3F185AE78E32B1 /* Sources */ = {
+		99604372B9343C3B2ED312D2435A358E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06258F9E1009A512BDD922DAECC669F3 /* Pods-ValueStepper_Example-dummy.m in Sources */,
+				4654ADA3AD62285671F2C8A8FD510E91 /* ValueStepper-iOS10.2-dummy.m in Sources */,
+				02DA31794176C1084276C4263CBEAD3F /* ValueStepper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EEEDB3E0ECFB4ECDC8925397FDB20FE /* Sources */ = {
+		9E9DE21A777F42CF5B31449B9609FB89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EAF1A98F91EF7F0CEF72E63E15E49D1 /* ValueStepper-dummy.m in Sources */,
-				C900A332DA29660D2D2DDC6B48664338 /* ValueStepper.swift in Sources */,
+				953677DF490800E541A02E6DD6CEEC7A /* Pods-Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		635BFA0A91537AE13206FE69DFF2B23A /* PBXTargetDependency */ = {
+		22DC4A3F002A2641B0453F99E97AEFAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "ValueStepper-ValueStepper";
-			target = 976CCE640C997915AA555BE223C15789 /* ValueStepper-ValueStepper */;
-			targetProxy = 430EFB0C6DADD93265B4D81059970B98 /* PBXContainerItemProxy */;
+			name = "ValueStepper-iOS8.3";
+			target = BFB295FF68E1C24844C019E171B6DD07 /* ValueStepper-iOS8.3 */;
+			targetProxy = 1106F1C3C3950E33106850C96D6DA192 /* PBXContainerItemProxy */;
 		};
-		922863DDDAF9EAADEE2123C1265A838D /* PBXTargetDependency */ = {
+		CA7ADC07C960538A4DCE1B28F396A6E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = ValueStepper;
-			target = 0A5188DEEB6699012E14F9E482479DDA /* ValueStepper */;
-			targetProxy = 6FB44561C321DE1575DB4E805CBE6CE3 /* PBXContainerItemProxy */;
-		};
-		A3056DFBFC623EDE9902DE07CB0F2649 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ValueStepper;
-			target = 0A5188DEEB6699012E14F9E482479DDA /* ValueStepper */;
-			targetProxy = 79292B566BB15574A56F10F2D652F279 /* PBXContainerItemProxy */;
+			name = "ValueStepper-iOS10.2";
+			target = 222904431EC0CF499451FEA3A5CF8B06 /* ValueStepper-iOS10.2 */;
+			targetProxy = DA3B9671284E826B929A175B51BBC7F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0C37EDCD82D8E65C62C866131F563979 /* Debug */ = {
+		490C00D4F829AFCCFF3C3B15FC0B94D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EF3F0A5407E12FB73C97C6DCE8146D2 /* ValueStepper.xcconfig */;
+			baseConfigurationReference = D1D385624A8BAAE3EC06D72989E2A65C /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = ValueStepper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		193A707FED3D4A8BF904F13D5E2B5679 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2D4E203B492E36BB5642842C3A7667A /* Pods-ValueStepper_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests/Pods-Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7E6EF10EDC201BE5194D0E92897E12A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E1EE7AF268DBD7613767ECAE7BED645 /* ValueStepper-iOS8.3.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ValueStepper-iOS8.3/ValueStepper-iOS8.3-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ValueStepper-iOS8.3/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ValueStepper-iOS8.3/ValueStepper-iOS8.3.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ValueStepper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		87CC67D0C935E6EA36B9B264CDDB580A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71EE74C76A98C2D8E4928DAB4D95DED4 /* Pods-ValueStepper_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-ValueStepper_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -530,21 +540,22 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_ValueStepper_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -558,11 +569,89 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BEA8505AE16914F203225E83317F084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C68A14E7528C1154CFFB1B7D83916D6 /* Pods-ValueStepper_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ValueStepper_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ValueStepper_Example/Pods-ValueStepper_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ValueStepper_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -575,33 +664,70 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		755BD49BF4F272DEFA882029A3CC6F0E /* Release */ = {
+		CD97D0DD477F6985024DBB32C10526EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 638A9FDE63FADCFF18F1C91618455D16 /* Pods-ValueStepper_Example.release.xcconfig */;
+			baseConfigurationReference = E268388AF9EF0714ED92E71819A67CEE /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ValueStepper_Example/Info.plist";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ValueStepper_Example/Pods-ValueStepper_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests/Pods-Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_ValueStepper_Example;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DEEB15F322B916B39B791D4059631941 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F065E3C3CD7345575D27DC2075B51A8 /* ValueStepper-iOS10.2.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ValueStepper-iOS10.2/ValueStepper-iOS10.2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ValueStepper-iOS10.2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ValueStepper-iOS10.2/ValueStepper-iOS10.2.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ValueStepper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -611,23 +737,27 @@
 			};
 			name = Release;
 		};
-		794E89818E11732CBF7202B13DC71697 /* Debug */ = {
+		EBE9A25329306A577AA26B91E91BE89A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EF3F0A5407E12FB73C97C6DCE8146D2 /* ValueStepper.xcconfig */;
+			baseConfigurationReference = 6E1EE7AF268DBD7613767ECAE7BED645 /* ValueStepper-iOS8.3.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ValueStepper/ValueStepper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ValueStepper/Info.plist";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ValueStepper-iOS8.3/ValueStepper-iOS8.3-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ValueStepper-iOS8.3/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ValueStepper/ValueStepper.modulemap";
+				MODULEMAP_FILE = "Target Support Files/ValueStepper-iOS8.3/ValueStepper-iOS8.3.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = ValueStepper;
 				SDKROOT = iphoneos;
@@ -640,56 +770,29 @@
 			};
 			name = Debug;
 		};
-		9A71F69356FFC31C9281C96EE52D0070 /* Release */ = {
+		F943A245E3FB3E54F5C8B8680B71B4DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EF3F0A5407E12FB73C97C6DCE8146D2 /* ValueStepper.xcconfig */;
+			baseConfigurationReference = 0F065E3C3CD7345575D27DC2075B51A8 /* ValueStepper-iOS10.2.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ValueStepper/ValueStepper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ValueStepper/Info.plist";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ValueStepper-iOS10.2/ValueStepper-iOS10.2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ValueStepper-iOS10.2/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ValueStepper/ValueStepper.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ValueStepper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9EFBC2BE10C5C9D2DA3C0DE89407835A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 849FF3AE3D5040B81820E47DF6DFF111 /* Pods-ValueStepper_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ValueStepper_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ValueStepper_Tests/Pods-ValueStepper_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/ValueStepper-iOS10.2/ValueStepper-iOS10.2.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_ValueStepper_Tests;
+				PRODUCT_NAME = ValueStepper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -699,58 +802,15 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		BC6C6A8499AC039DDF4AB18428CCE839 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AADCB927D9B33DDC10A7B988B509DB1 /* Pods-ValueStepper_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ValueStepper_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ValueStepper_Tests/Pods-ValueStepper_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_ValueStepper_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F3A41A2D933001BA5FB2F7D5B853EBEF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EF3F0A5407E12FB73C97C6DCE8146D2 /* ValueStepper.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = ValueStepper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		09339610B2D1CA3CFC1BFB286238DB1D /* Build configuration list for PBXNativeTarget "Pods-ValueStepper_Example" */ = {
+		1D386A979D413168462C28C0B3E3472D /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				193A707FED3D4A8BF904F13D5E2B5679 /* Debug */,
-				755BD49BF4F272DEFA882029A3CC6F0E /* Release */,
+				490C00D4F829AFCCFF3C3B15FC0B94D6 /* Debug */,
+				CD97D0DD477F6985024DBB32C10526EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -758,35 +818,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
-				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
+				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		425310634731C1D5065D7F5BD0EA574B /* Build configuration list for PBXNativeTarget "ValueStepper-ValueStepper" */ = {
+		2DE56D6FED61A46B7790200E0E6FAE6C /* Build configuration list for PBXNativeTarget "ValueStepper-iOS10.2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C37EDCD82D8E65C62C866131F563979 /* Debug */,
-				F3A41A2D933001BA5FB2F7D5B853EBEF /* Release */,
+				F943A245E3FB3E54F5C8B8680B71B4DA /* Debug */,
+				DEEB15F322B916B39B791D4059631941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		664E7B5D5F4AAE304408590418F6785A /* Build configuration list for PBXNativeTarget "ValueStepper" */ = {
+		46DB9895A50C4594C7DF1100C4B4E133 /* Build configuration list for PBXNativeTarget "Pods-ValueStepper_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				794E89818E11732CBF7202B13DC71697 /* Debug */,
-				9A71F69356FFC31C9281C96EE52D0070 /* Release */,
+				87CC67D0C935E6EA36B9B264CDDB580A /* Debug */,
+				9BEA8505AE16914F203225E83317F084 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCCBCF74E2AF1DCD32680B98C645A443 /* Build configuration list for PBXNativeTarget "Pods-ValueStepper_Tests" */ = {
+		EF647B99D61E5AB378C6623C6E6B8B44 /* Build configuration list for PBXNativeTarget "ValueStepper-iOS8.3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9EFBC2BE10C5C9D2DA3C0DE89407835A /* Debug */,
-				BC6C6A8499AC039DDF4AB18428CCE839 /* Release */,
+				EBE9A25329306A577AA26B91E91BE89A /* Debug */,
+				7E6EF10EDC201BE5194D0E92897E12A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

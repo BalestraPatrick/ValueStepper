@@ -138,10 +138,6 @@ private enum Button: Int {
     
     // MARK: Storyboard preview setup
     
-    func increase() {
-        
-    }
-    
     override public func prepareForInterfaceBuilder() {
         setUp()
     }

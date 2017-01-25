@@ -5,6 +5,6 @@ target 'ValueStepper_Example' do
   pod 'ValueStepper', :path => '../'
 end
 
-target 'ValueStepper_Tests' do
+target 'Tests' do
   pod 'ValueStepper', :path => '../'
 end
