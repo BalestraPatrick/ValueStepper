@@ -31,11 +31,9 @@
 		0386ADC7AC95D5A856CF7C9F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2798EF8AD00C403286093AD1 /* Pods_ValueStepper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValueStepper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E04B2CBB2F82828F2426EC /* Pods_ValueStepper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValueStepper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D70675BFC1268034A934043 /* Pods-ValueStepper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValueStepper_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValueStepper_Tests/Pods-ValueStepper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2DBE2884F94A8517090C2175 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3262446452082586DAB6DDA1 /* ValueStepper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ValueStepper.podspec; path = ../ValueStepper.podspec; sourceTree = "<group>"; };
 		42F2EAD57F776A8D9442463C /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		57E95756124F5ADB2ABFDA0B /* Pods-ValueStepper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValueStepper_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValueStepper_Tests/Pods-ValueStepper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ValueStepper_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValueStepper_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,8 +137,6 @@
 			children = (
 				C47FB9309537D4027FFF7387 /* Pods-ValueStepper_Example.debug.xcconfig */,
 				80C925FFB236A6C080E92068 /* Pods-ValueStepper_Example.release.xcconfig */,
-				2D70675BFC1268034A934043 /* Pods-ValueStepper_Tests.debug.xcconfig */,
-				57E95756124F5ADB2ABFDA0B /* Pods-ValueStepper_Tests.release.xcconfig */,
 				A8FB5ADBBF6E0CDD207861F0 /* Pods-Tests.debug.xcconfig */,
 				42F2EAD57F776A8D9442463C /* Pods-Tests.release.xcconfig */,
 			);
