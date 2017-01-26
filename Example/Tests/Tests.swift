@@ -42,7 +42,6 @@ class Tests: XCTestCase {
         XCTAssertEqual(stepper.value, 0)
         stepper.decrease(UIButton())
         XCTAssertEqual(stepper.value, 0)
-        // isEnabled tests
     }
 
     func test_decrementAtUpperBound() {
