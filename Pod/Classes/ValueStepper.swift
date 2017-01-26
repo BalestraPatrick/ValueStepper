@@ -342,6 +342,8 @@ private enum Button: Int {
         valueLabel.textColor = tintColor
         leftSeparator.strokeColor = tintColor.cgColor
         rightSeparator.strokeColor = tintColor.cgColor
+        increaseLayer.strokeColor = tintColor.cgColor
+        decreaseLayer.strokeColor = tintColor.cgColor
     }
     
 }
