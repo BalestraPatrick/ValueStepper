@@ -113,7 +113,13 @@ private enum Button: Int {
     private var rightSeparator = CAShapeLayer()
     
     // Timer used in case that autorepeat is true to change the value continuously.
-    private var continuousTimer: Timer?
+    private var continuousTimer: Timer? {
+        didSet {
+            if let timer = oldValue {
+                timer.invalidate()
+            }
+        }
+    }
 
     
     // MARK: Initializers
@@ -136,8 +142,8 @@ private enum Button: Int {
         addSubview(increaseButton)
         
         // Control events
-        decreaseButton.addTarget(self, action: #selector(decrease(_:)), for: .touchUpInside)
-        increaseButton.addTarget(self, action: #selector(increase(_:)), for: .touchUpInside)
+        decreaseButton.addTarget(self, action: #selector(decrease(_:)), for: [.touchUpInside, .touchCancel])
+        increaseButton.addTarget(self, action: #selector(increase(_:)), for: [.touchUpInside, .touchCancel])
         increaseButton.addTarget(self, action: #selector(stopContinuous(_:)), for: .touchUpOutside)
         decreaseButton.addTarget(self, action: #selector(stopContinuous(_:)), for: .touchUpOutside)
         decreaseButton.addTarget(self, action: #selector(selected(_:)), for: .touchDown)
@@ -258,14 +264,12 @@ private enum Button: Int {
     
     internal func decrease(_ sender: UIButton) {
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
-        continuousTimer?.invalidate()
         continuousTimer = nil
         decreaseValue()
     }
     
     internal func increase(_ sender: UIButton) {
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
-        continuousTimer?.invalidate()
         continuousTimer = nil
         increaseValue()
     }
@@ -292,7 +296,7 @@ private enum Button: Int {
     
     func stopContinuous(_ sender: UIButton) {
         // When dragged outside, stop the timer.
-        continuousTimer?.invalidate()
+        continuousTimer = nil
     }
     
     func increaseValue() {
@@ -317,12 +321,12 @@ private enum Button: Int {
             increaseButton.isEnabled = false
             decreaseButton.isEnabled = true
             increaseLayer.strokeColor = UIColor.gray.cgColor
-            continuousTimer?.invalidate()
+            continuousTimer = nil
         } else if value <= minimumValue {
             decreaseButton.isEnabled = false
             increaseButton.isEnabled = true
             decreaseLayer.strokeColor = UIColor.gray.cgColor
-            continuousTimer?.invalidate()
+            continuousTimer = nil
         } else {
             increaseButton.isEnabled = true
             decreaseButton.isEnabled = true
