@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ValueStepper"
-  s.version          = "1.1.1"
+  s.version          = "1.1.2"
   s.summary          = "A Stepper object that displays its value."
   s.description      = "ValueStepper is an improved replication of Apple's UIStepper object. The problem with UIStepper is that it doesn't display the value to the user. I was tired of creating a simple UILabel just to show the value in the UI. ValueStepper integrates the value in a UILabel between the increase and decrease buttons. It's as easy as that."
 
