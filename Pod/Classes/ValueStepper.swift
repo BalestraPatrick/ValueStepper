@@ -17,7 +17,7 @@ private enum Button: Int {
     case increase
 }
 
-@IBDesignable public class ValueStepper: UIControl {
+@IBDesignable public open class ValueStepper: UIControl {
     
     // MARK - Public variables
     
