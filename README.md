@@ -76,7 +76,7 @@ ValueStepper is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your `Podfile`:
 
 ```ruby
-pod "ValueStepper"
+pod 'ValueStepper'
 ```
 
 You can also use [Carthage](https://github.com/Carthage/Carthage) if you prefer. Add this line to your `Cartfile`.
