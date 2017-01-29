@@ -17,7 +17,7 @@ private enum Button: Int {
     case increase
 }
 
-@IBDesignable public open class ValueStepper: UIControl {
+@IBDesignable open class ValueStepper: UIControl {
     
     // MARK - Public variables
     
@@ -152,17 +152,17 @@ private enum Button: Int {
     
     // MARK: Storyboard preview setup
     
-    override public func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         setUp()
     }
 
-    public override var intrinsicContentSize: CGSize {
+    open override var intrinsicContentSize: CGSize {
         get {
             return CGSize(width: defaultWidth, height: defaultHeight)
         }
     }
     
-    public override static var requiresConstraintBasedLayout: Bool {
+    open override static var requiresConstraintBasedLayout: Bool {
         get {
             return true
         }
@@ -170,7 +170,7 @@ private enum Button: Int {
     
     // MARK: Lifecycle
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         // Size constants
         let sliceWidth = bounds.width / 3
         let sliceHeight = bounds.height
@@ -187,7 +187,7 @@ private enum Button: Int {
         setFormattedValue(value)
     }
     
-    public override func draw(_ rect: CGRect) {
+    open override func draw(_ rect: CGRect) {
         // Size constants
         let sliceWidth = bounds.width / 3
         let sliceHeight = bounds.height
@@ -341,7 +341,7 @@ private enum Button: Int {
     }
     
     // Update all the subviews tintColor properties.
-    public override func tintColorDidChange() {
+    open override func tintColorDidChange() {
         layer.borderColor = tintColor.cgColor
         valueLabel.textColor = tintColor
         leftSeparator.strokeColor = tintColor.cgColor
