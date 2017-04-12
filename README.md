@@ -99,4 +99,4 @@ Twitter: [@BalestraPatrick](http://twitter.com/BalestraPatrick).
 
 `ValueStepper` is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
-Inspired by [GMStepper](https://github.com/gmertk/GMStepper). Thanks to [Gmertk](https://github.com/gmertk) for the interesting and useful related [blog post](http://gmertk.github.io/custom-stepper-part-1/).
+Inspired by [GMStepper](https://github.com/gmertk/GMStepper). Thanks to [Gmertk](https://github.com/gmertk) for the interesting and useful related [blog post](http://gmertk.github.io/custom-stepper-part-1).
