@@ -14,11 +14,11 @@
 ## Usage
 To see it in action, run the example project, clone the repo, and run `pod install` from the `Example` directory first. The example project shows how to set up `ValueStepper` in Storyboard. 
 
-###Storyboard
+### Storyboard
 Drag a `UIView` object and set the class to `ValueStepper` (if needed set the module to `ValueStepper` too). You can now customize all the properties in IB such as the `minimumValue`, `tintColor` and so on. Make sure to set the width to 149 and the height to 29 which are the default values. Create an `@IBAction` on the `ValueChanged` control event to be notified when the value changes.
 ![](Resources/storyboard.png)
 
-###Programmatically
+### Programmatically
 ```swift
 import ValueStepper
 
