@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         moneyFormatter.maximumFractionDigits = 0
         stepper3.numberFormatter = moneyFormatter
         
-        stepper3.addTarget(self, action: #selector(valueChanged3), for: .valueChanged)
+        stepper3.addTarget(self, action: #selector(ViewController.valueChanged3), for: .valueChanged)
     }
     
     @IBAction func valueChanged1(_ sender: ValueStepper) {
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         print("Stepper 2: \(sender.value)")
     }
     
-    func valueChanged3(_ sender: ValueStepper) {
+    @objc func valueChanged3(_ sender: ValueStepper) {
         print("Stepper 3: \(sender.value)")
     }
 }

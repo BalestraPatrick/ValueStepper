@@ -262,19 +262,19 @@ private enum Button: Int {
     
     // MARK: Control Events
     
-    internal func decrease(_ sender: UIButton) {
+    @objc func decrease(_ sender: UIButton) {
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
         continuousTimer = nil
         decreaseValue()
     }
     
-    internal func increase(_ sender: UIButton) {
+    @objc func increase(_ sender: UIButton) {
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
         continuousTimer = nil
         increaseValue()
     }
     
-    internal func continuousIncrement(_ timer: Timer) {
+    @objc func continuousIncrement(_ timer: Timer) {
         // Check which one of the two buttons was continuously pressed
         let userInfo = timer.userInfo as! Dictionary<String, AnyObject>
         guard let sender = userInfo["sender"] as? UIButton else { return }
@@ -286,7 +286,7 @@ private enum Button: Int {
         }
     }
     
-    func selected(_ sender: UIButton) {
+    @objc func selected(_ sender: UIButton) {
         // Start a timer to handle the continuous pressed case
         if autorepeat {
             continuousTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(continuousIncrement), userInfo: ["sender" : sender], repeats: true)
@@ -294,7 +294,7 @@ private enum Button: Int {
         sender.backgroundColor = UIColor(white: 1.0, alpha: 0.1)
     }
     
-    func stopContinuous(_ sender: UIButton) {
+    @objc func stopContinuous(_ sender: UIButton) {
         // When dragged outside, stop the timer.
         continuousTimer = nil
     }
