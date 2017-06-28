@@ -326,13 +326,13 @@ private enum Button: Int {
         }
         
         alertController.addAction(UIAlertAction(title: "Confirm", style: .default) { (_) in
-            if let field = alertController.textFields?[0] as UITextField! {
-                self.value = Double(field.text!)!
-                
-            } else {
-                // user did not fill field
+            if let newValue = Double((alertController.textFields?[0].text)!) as Double! {
+                if newValue >= self.minimumValue || newValue <= self.maximumValue {
+                    self.value = newValue
+                }
             }
         })
+        
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (_) in })
         
         getTopMostViewController()?.present(alertController, animated: true, completion: nil)
