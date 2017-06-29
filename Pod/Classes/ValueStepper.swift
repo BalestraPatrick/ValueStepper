@@ -48,6 +48,15 @@ private enum Button: Int {
         }
     }
     
+    /// When set to true, the user can tap the label and manually enter a value.
+    @IBInspectable public var enableManualEditing: Bool = false {
+        didSet {
+            valueLabel.isUserInteractionEnabled = enableManualEditing
+        }
+    }
+    
+    
+    
     /// The value added/subtracted when one of the two buttons is pressed.
     @IBInspectable public var stepValue: Double = 0.1
     
@@ -97,7 +106,6 @@ private enum Button: Int {
         label.backgroundColor = UIColor.clear
         label.minimumScaleFactor = 0.5
         label.adjustsFontSizeToFitWidth = true
-        label.isUserInteractionEnabled = true
         return label
     }()
     
