@@ -323,7 +323,7 @@ private enum Button: Int {
         }
     }
     
-    func labelPressed(_ sender: UITapGestureRecognizer) {
+    @objc func labelPressed(_ sender: UITapGestureRecognizer) {
         let alertController = UIAlertController(title: "Enter a value", message: nil, preferredStyle: .alert)
         
         alertController.addTextField { textField in
