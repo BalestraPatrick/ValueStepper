@@ -17,10 +17,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Enabled a tap on the label to manually modify the value in a UIAlertController.
         stepper1.enableManualEditing = true
-        
-        // Set up currency number formatter
+
+        // Set up currency number formatter.
         let moneyFormatter = NumberFormatter()
         moneyFormatter.numberStyle = .currency
         moneyFormatter.maximumFractionDigits = 0

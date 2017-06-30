@@ -55,8 +55,6 @@ private enum Button: Int {
         }
     }
     
-    
-    
     /// The value added/subtracted when one of the two buttons is pressed.
     @IBInspectable public var stepValue: Double = 0.1
     
@@ -325,10 +323,10 @@ private enum Button: Int {
         }
     }
     
-    func labelPressed(_ sender: Any) {
-        let alertController = UIAlertController(title: "Value", message: "Enter a value", preferredStyle: .alert)
+    func labelPressed(_ sender: UITapGestureRecognizer) {
+        let alertController = UIAlertController(title: "Enter a value", message: nil, preferredStyle: .alert)
         
-        alertController.addTextField { (textField) in
+        alertController.addTextField { textField in
             textField.placeholder = "Value"
             textField.keyboardType = .decimalPad
         }
@@ -345,7 +343,6 @@ private enum Button: Int {
         
         getTopMostViewController()?.present(alertController, animated: true, completion: nil)
     }
-    
     
     // MARK: Actions
     
@@ -396,7 +393,6 @@ private enum Button: Int {
         }
         return nil
     }
-    
 }
 
 extension Double {
