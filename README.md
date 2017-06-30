@@ -54,6 +54,9 @@ These are the available properties with the relative documentation.
 /// Maximum value that must be greater than the minimum value.
 @IBInspectable public var maximumValue: Double = 1.0
     
+/// When set to true, the user can tap the label and manually enter a value.
+@IBInspectable public var enableManualEditing: Bool = false
+
 /// The value added/subtracted when one of the two buttons is pressed.
 @IBInspectable public var stepValue: Double = 0.1
     

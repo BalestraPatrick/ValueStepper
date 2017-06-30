@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        stepper1.enableManualEditing = true
+        
         // Set up currency number formatter
         let moneyFormatter = NumberFormatter()
         moneyFormatter.numberStyle = .currency

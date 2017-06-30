@@ -48,6 +48,15 @@ private enum Button: Int {
         }
     }
     
+    /// When set to true, the user can tap the label and manually enter a value.
+    @IBInspectable public var enableManualEditing: Bool = false {
+        didSet {
+            valueLabel.isUserInteractionEnabled = enableManualEditing
+        }
+    }
+    
+    
+    
     /// The value added/subtracted when one of the two buttons is pressed.
     @IBInspectable public var stepValue: Double = 0.1
     
@@ -148,6 +157,9 @@ private enum Button: Int {
         decreaseButton.addTarget(self, action: #selector(stopContinuous(_:)), for: .touchUpOutside)
         decreaseButton.addTarget(self, action: #selector(selected(_:)), for: .touchDown)
         increaseButton.addTarget(self, action: #selector(selected(_:)), for: .touchDown)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelPressed(_:)))
+        valueLabel.addGestureRecognizer(tapGesture)
     }
     
     // MARK: Storyboard preview setup
@@ -313,6 +325,28 @@ private enum Button: Int {
         }
     }
     
+    func labelPressed(_ sender: Any) {
+        let alertController = UIAlertController(title: "Value", message: "Enter a value", preferredStyle: .alert)
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Value"
+            textField.keyboardType = .decimalPad
+        }
+        
+        alertController.addAction(UIAlertAction(title: "Confirm", style: .default) { (_) in
+            if let newValue = Double((alertController.textFields?[0].text)!) as Double! {
+                if newValue >= self.minimumValue || newValue <= self.maximumValue {
+                    self.value = newValue
+                }
+            }
+        })
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (_) in })
+        
+        getTopMostViewController()?.present(alertController, animated: true, completion: nil)
+    }
+    
+    
     // MARK: Actions
     
     // Set correct state of the buttons (in case we reached the minimum or maximum value).
@@ -348,6 +382,19 @@ private enum Button: Int {
         rightSeparator.strokeColor = tintColor.cgColor
         increaseLayer.strokeColor = tintColor.cgColor
         decreaseLayer.strokeColor = tintColor.cgColor
+    }
+    
+    
+    // MARK: Helpers
+    
+    func getTopMostViewController() -> UIViewController? {
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            return topController
+        }
+        return nil
     }
     
 }
