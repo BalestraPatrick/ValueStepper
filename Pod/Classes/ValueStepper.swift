@@ -71,6 +71,16 @@ private enum Button: Int {
     
     // Default height of the stepper. Taken from the official UIStepper object.
     public let defaultHeight = 29.0
+
+    /// Value label that displays the current value displayed at the center of the stepper.
+    private let valueLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.backgroundColor = UIColor.clear
+        label.minimumScaleFactor = 0.5
+        label.adjustsFontSizeToFitWidth = true
+        return label
+    }()
     
     // MARK - Private variables
     
@@ -88,16 +98,6 @@ private enum Button: Int {
         button.backgroundColor = UIColor.clear
         button.tag = Button.increase.rawValue
         return button
-    }()
-    
-    /// Value label that displays the current value displayed at the center of the stepper.
-    private let valueLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.backgroundColor = UIColor.clear
-        label.minimumScaleFactor = 0.5
-        label.adjustsFontSizeToFitWidth = true
-        return label
     }()
     
     // Decrease (-) button layer. Declared here because we can change its color when not enabled.
