@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var stepper1: ValueStepper!
     @IBOutlet weak var stepper2: ValueStepper!
     @IBOutlet weak var stepper3: ValueStepper!
+    @IBOutlet weak var stepper4: ValueStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,10 @@ class ViewController: UIViewController {
     
     func valueChanged3(_ sender: ValueStepper) {
         print("Stepper 3: \(sender.value)")
+    }
+
+    @IBAction func valueChanged4(_ sender: ValueStepper) {
+        print("Stepper 4: \(sender.value)")
     }
 }
 
