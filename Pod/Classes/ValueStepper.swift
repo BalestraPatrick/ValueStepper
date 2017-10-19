@@ -60,6 +60,12 @@ private enum Button: Int {
     
     /// When set to true, keeping a button pressed will continuously increase/decrease the value every 0.1s.
     @IBInspectable public var autorepeat: Bool = true
+
+    /// The background color of the stepper buttons while pressed.
+    @IBInspectable public var highlightedBackgroundColor: UIColor = UIColor(white: 1.0, alpha: 0.1)
+
+    /// The color of the +/- sign when in disabled state.
+    @IBInspectable public var disabledButtonColor: UIColor = UIColor.gray
     
     /// Describes the format of the value.
     public var numberFormatter: NumberFormatter = {
@@ -271,15 +277,15 @@ private enum Button: Int {
     }
     
     // MARK: Control Events
-    
+
     @objc func decrease(_ sender: UIButton) {
-        sender.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
+        sender.backgroundColor = UIColor.clear
         continuousTimer = nil
         decreaseValue()
     }
-    
+
     @objc func increase(_ sender: UIButton) {
-        sender.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
+        sender.backgroundColor = UIColor.clear
         continuousTimer = nil
         increaseValue()
     }
@@ -301,7 +307,7 @@ private enum Button: Int {
         if autorepeat {
             continuousTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(continuousIncrement), userInfo: ["sender" : sender], repeats: true)
         }
-        sender.backgroundColor = UIColor(white: 1.0, alpha: 0.1)
+        sender.backgroundColor = highlightedBackgroundColor
     }
     
     @objc func stopContinuous(_ sender: UIButton) {
@@ -351,12 +357,12 @@ private enum Button: Int {
         if value >= maximumValue {
             increaseButton.isEnabled = false
             decreaseButton.isEnabled = true
-            increaseLayer.strokeColor = UIColor.gray.cgColor
+            increaseLayer.strokeColor = disabledButtonColor.cgColor
             continuousTimer = nil
         } else if value <= minimumValue {
             decreaseButton.isEnabled = false
             increaseButton.isEnabled = true
-            decreaseLayer.strokeColor = UIColor.gray.cgColor
+            decreaseLayer.strokeColor = disabledButtonColor.cgColor
             continuousTimer = nil
         } else {
             increaseButton.isEnabled = true
