@@ -1,6 +1,5 @@
 # ValueStepper
 
-[![CI Status](http://img.shields.io/travis/BalestraPatrick/ValueStepper.svg?style=flat)](https://travis-ci.org/BalestraPatrick/ValueStepper)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/ValueStepper.svg?style=flat)](http://cocoapods.org/pods/ValueStepper)
 [![License](https://img.shields.io/cocoapods/l/ValueStepper.svg?style=flat)](http://cocoapods.org/pods/ValueStepper)
@@ -88,9 +87,9 @@ You can also use [Carthage](https://github.com/Carthage/Carthage) if you prefer.
 github "BalestraPatrick/ValueStepper"
 ```
 ## Requirements
-iOS 8.3 and Swift 3.0 are required.
+iOS 8.3 and Swift 4.0 are required.
 
-- If you are using Swift 4, use the [swift-4 branch](https://github.com/BalestraPatrick/ValueStepper/tree/swift-4).
+- If you are using Swift 4, use the [master branch](https://github.com/BalestraPatrick/ValueStepper/tree/master).
 - If you are using Swift 3.2, use the [swift-3.2 branch](https://github.com/BalestraPatrick/ValueStepper/tree/swift-3.2).
 - If you are using Swift 2.3, use the [swift-2.3 branch](https://github.com/BalestraPatrick/ValueStepper/tree/swift-2.3).
 
