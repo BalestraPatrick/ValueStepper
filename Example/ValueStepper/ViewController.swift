@@ -29,6 +29,14 @@ class ViewController: UIViewController {
         stepper3.numberFormatter = moneyFormatter
         
         stepper3.addTarget(self, action: #selector(ViewController.valueChanged3), for: .valueChanged)
+
+        stepper4.tintColor = .white
+        stepper4.disabledIconButtonColor = .white
+        stepper4.disabledBackgroundButtonColor = UIColor(red: 43 / 255, green: 145 / 255, blue: 154 / 255, alpha: 1)
+        stepper4.backgroundButtonColor = UIColor(red: 57 / 255, green: 193 / 255, blue: 204 / 255, alpha: 1)
+        stepper4.highlightedBackgroundColor = UIColor(red: 43 / 255, green: 145 / 255, blue: 154 / 255, alpha: 1)
+        stepper4.backgroundLabelColor = .clear
+        stepper4.enableManualEditing = true
     }
     
     @IBAction func valueChanged1(_ sender: ValueStepper) {

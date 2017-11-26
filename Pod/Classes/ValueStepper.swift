@@ -64,8 +64,33 @@ private enum Button: Int {
     /// The background color of the stepper buttons while pressed.
     @IBInspectable public var highlightedBackgroundColor: UIColor = UIColor(white: 1.0, alpha: 0.1)
 
-    /// The color of the +/- sign when in disabled state.
-    @IBInspectable public var disabledButtonColor: UIColor = UIColor.gray
+    /// The color of the +/- icons when in disabled state.
+    @IBInspectable public var disabledIconButtonColor: UIColor = UIColor.gray
+
+    /// The color of the +/- buttons background when in disabled state.
+    @IBInspectable public var disabledBackgroundButtonColor: UIColor = UIColor.clear
+
+    /// The background color of the plus and minus buttons.
+    @IBInspectable public var backgroundButtonColor: UIColor = UIColor.clear {
+        didSet {
+            decreaseButton.backgroundColor = backgroundButtonColor
+            increaseButton.backgroundColor = backgroundButtonColor
+        }
+    }
+
+    /// The background color of the center view that contains the value label.
+    @IBInspectable public var backgroundLabelColor: UIColor = UIColor.clear {
+        didSet {
+            valueLabel.backgroundColor = backgroundLabelColor
+        }
+    }
+
+    /// The text color of the value label in positioned in the center.
+    @IBInspectable public var labelTextColor: UIColor = UIColor.white {
+        didSet {
+            valueLabel.textColor = labelTextColor
+        }
+    }
     
     /// Describes the format of the value.
     public var numberFormatter: NumberFormatter = {
@@ -89,7 +114,6 @@ private enum Button: Int {
     public let valueLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.backgroundColor = UIColor.clear
         label.minimumScaleFactor = 0.5
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -98,15 +122,15 @@ private enum Button: Int {
     // MARK - Private variables
     
     /// Decrease button positioned on the left of the stepper.
-    internal let decreaseButton: UIButton = {
+    internal lazy var decreaseButton: UIButton = {
         let button = UIButton(type: UIButtonType.custom)
-        button.backgroundColor = UIColor.clear
         button.tag = Button.decrease.rawValue
+        button.backgroundColor = backgroundButtonColor
         return button
     }()
     
     /// Increase button positioned on the right of the stepper.
-    internal let increaseButton: UIButton = {
+    internal lazy var increaseButton: UIButton = {
         let button = UIButton(type: UIButtonType.custom)
         button.backgroundColor = UIColor.clear
         button.tag = Button.increase.rawValue
@@ -133,7 +157,6 @@ private enum Button: Int {
             }
         }
     }
-
     
     // MARK: Initializers
     
@@ -173,15 +196,11 @@ private enum Button: Int {
     }
 
     open override var intrinsicContentSize: CGSize {
-        get {
-            return CGSize(width: defaultWidth, height: defaultHeight)
-        }
+        return CGSize(width: defaultWidth, height: defaultHeight)
     }
     
     open override static var requiresConstraintBasedLayout: Bool {
-        get {
-            return true
-        }
+        return true
     }
     
     // MARK: Lifecycle
@@ -196,9 +215,6 @@ private enum Button: Int {
         valueLabel.frame = CGRect(x: sliceWidth, y: 0, width: sliceWidth, height: sliceHeight)
         increaseButton.frame = CGRect(x: sliceWidth * 2, y: 0, width: sliceWidth, height: sliceHeight)
         
-        // Set text color to tintColor
-        valueLabel.textColor = tintColor
-        
         // Set initial formatted value
         setFormattedValue(value)
     }
@@ -209,6 +225,9 @@ private enum Button: Int {
         let sliceHeight = bounds.height
         let thickness = 1.0 as CGFloat
         let iconSize: CGFloat = sliceHeight * 0.6
+
+        valueLabel.backgroundColor = backgroundLabelColor
+        valueLabel.textColor = labelTextColor
         
         // Layer customizations
         layer.borderColor = tintColor.cgColor
@@ -279,13 +298,11 @@ private enum Button: Int {
     // MARK: Control Events
 
     @objc func decrease(_ sender: UIButton) {
-        sender.backgroundColor = UIColor.clear
         continuousTimer = nil
         decreaseValue()
     }
 
     @objc func increase(_ sender: UIButton) {
-        sender.backgroundColor = UIColor.clear
         continuousTimer = nil
         increaseValue()
     }
@@ -330,23 +347,19 @@ private enum Button: Int {
     }
     
     @objc func labelPressed(_ sender: UITapGestureRecognizer) {
-        let alertController = UIAlertController(title: "Enter a value", message: nil, preferredStyle: .alert)
-        
+        let alertController = UIAlertController(title: "Enter Value", message: nil, preferredStyle: .alert)
         alertController.addTextField { textField in
             textField.placeholder = "Value"
             textField.keyboardType = .decimalPad
         }
-        
-        alertController.addAction(UIAlertAction(title: "Confirm", style: .default) { (_) in
-            if let newValue = Double((alertController.textFields?[0].text)!) as Double! {
+        alertController.addAction(UIAlertAction(title: "Confirm", style: .default) { _ in
+            if let newString = alertController.textFields?.first?.text, let newValue = Double(newString) {
                 if newValue >= self.minimumValue || newValue <= self.maximumValue {
                     self.value = newValue
                 }
             }
         })
-        
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (_) in })
-        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         getTopMostViewController()?.present(alertController, animated: true, completion: nil)
     }
     
@@ -356,23 +369,33 @@ private enum Button: Int {
     private func setState() {
         if value >= maximumValue {
             increaseButton.isEnabled = false
+            increaseButton.backgroundColor = disabledBackgroundButtonColor
+            increaseLayer.strokeColor = disabledIconButtonColor.cgColor
             decreaseButton.isEnabled = true
-            increaseLayer.strokeColor = disabledButtonColor.cgColor
+            if continuousTimer == nil {
+                decreaseButton.backgroundColor = backgroundButtonColor
+            }
             continuousTimer = nil
         } else if value <= minimumValue {
-            decreaseButton.isEnabled = false
             increaseButton.isEnabled = true
-            decreaseLayer.strokeColor = disabledButtonColor.cgColor
+            if continuousTimer == nil {
+                increaseButton.backgroundColor = backgroundButtonColor
+            }
+            decreaseButton.isEnabled = false
+            decreaseButton.backgroundColor = disabledBackgroundButtonColor
+            decreaseLayer.strokeColor = disabledIconButtonColor.cgColor
             continuousTimer = nil
         } else {
             increaseButton.isEnabled = true
-            decreaseButton.isEnabled = true
+            increaseButton.backgroundColor = backgroundButtonColor
             increaseLayer.strokeColor = tintColor.cgColor
+            decreaseButton.isEnabled = true
+            decreaseButton.backgroundColor = backgroundButtonColor
             decreaseLayer.strokeColor = tintColor.cgColor
         }
     }
     
-    // Display the value with the
+    // Display the value with the correctly formatted value.
     private func setFormattedValue(_ value: Double) {
         valueLabel.text = numberFormatter.string(from: NSNumber(value: value))
     }
@@ -380,14 +403,13 @@ private enum Button: Int {
     // Update all the subviews tintColor properties.
     open override func tintColorDidChange() {
         layer.borderColor = tintColor.cgColor
-        valueLabel.textColor = tintColor
+        valueLabel.textColor = labelTextColor
         leftSeparator.strokeColor = tintColor.cgColor
         rightSeparator.strokeColor = tintColor.cgColor
         increaseLayer.strokeColor = tintColor.cgColor
         decreaseLayer.strokeColor = tintColor.cgColor
     }
-    
-    
+
     // MARK: Helpers
     
     func getTopMostViewController() -> UIViewController? {
@@ -405,7 +427,7 @@ extension Double {
 
     /// Rounds a double to `digits` decimal places.
     func rounded(digits: Int) -> Double {
-        let behavior = NSDecimalNumberHandler(roundingMode: NSDecimalNumber.RoundingMode.bankers, scale: Int16(digits), raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: true)
+        let behavior = NSDecimalNumberHandler(roundingMode: .bankers, scale: Int16(digits), raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: true)
         return NSDecimalNumber(value: self).rounding(accordingToBehavior: behavior).doubleValue
     }
 }
