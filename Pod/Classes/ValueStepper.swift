@@ -65,13 +65,13 @@ private enum Button: Int {
     @IBInspectable public var highlightedBackgroundColor: UIColor = UIColor(white: 1.0, alpha: 0.1)
 
     /// The color of the +/- icons when in disabled state.
-    @IBInspectable public var disabledIconButtonColor: UIColor = UIColor.gray
+    @IBInspectable public var disabledIconButtonColor: UIColor = .gray
 
     /// The color of the +/- buttons background when in disabled state.
-    @IBInspectable public var disabledBackgroundButtonColor: UIColor = UIColor.clear
+    @IBInspectable public var disabledBackgroundButtonColor: UIColor = .clear
 
     /// The background color of the plus and minus buttons.
-    @IBInspectable public var backgroundButtonColor: UIColor = UIColor.clear {
+    @IBInspectable public var backgroundButtonColor: UIColor = .clear {
         didSet {
             decreaseButton.backgroundColor = backgroundButtonColor
             increaseButton.backgroundColor = backgroundButtonColor
@@ -79,14 +79,14 @@ private enum Button: Int {
     }
 
     /// The background color of the center view that contains the value label.
-    @IBInspectable public var backgroundLabelColor: UIColor = UIColor.clear {
+    @IBInspectable public var backgroundLabelColor: UIColor = .clear {
         didSet {
             valueLabel.backgroundColor = backgroundLabelColor
         }
     }
 
     /// The text color of the value label in positioned in the center.
-    @IBInspectable public var labelTextColor: UIColor = UIColor.white {
+    @IBInspectable public var labelTextColor: UIColor = .white {
         didSet {
             valueLabel.textColor = labelTextColor
         }
@@ -123,7 +123,7 @@ private enum Button: Int {
     
     /// Decrease button positioned on the left of the stepper.
     internal lazy var decreaseButton: UIButton = {
-        let button = UIButton(type: UIButtonType.custom)
+        let button = UIButton(type: .custom)
         button.tag = Button.decrease.rawValue
         button.backgroundColor = backgroundButtonColor
         return button
@@ -131,8 +131,8 @@ private enum Button: Int {
     
     /// Increase button positioned on the right of the stepper.
     internal lazy var increaseButton: UIButton = {
-        let button = UIButton(type: UIButtonType.custom)
-        button.backgroundColor = UIColor.clear
+        let button = UIButton(type: .custom)
+        button.backgroundColor = .clear
         button.tag = Button.increase.rawValue
         return button
     }()
@@ -233,7 +233,7 @@ private enum Button: Int {
         layer.borderColor = tintColor.cgColor
         layer.borderWidth = 1.0
         layer.cornerRadius = 4.0
-        backgroundColor = UIColor.clear
+        backgroundColor = .clear
         clipsToBounds = true
         
         let leftPath = UIBezierPath()
