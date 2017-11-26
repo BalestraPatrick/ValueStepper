@@ -47,29 +47,50 @@ These are the available properties with the relative documentation.
 /// Current value and sends UIControlEventValueChanged when modified.
 @IBInspectable public var value: Double = 0.0
     
-/// Minimum value that must be the less than the maximum value.
-@IBInspectable public var minimumValue: Double = 0.0
+/// Minimum value that must be less than the maximum value.
+@IBInspectable public var minimumValue: Double = 0.0 
     
 /// Maximum value that must be greater than the minimum value.
 @IBInspectable public var maximumValue: Double = 1.0
     
 /// When set to true, the user can tap the label and manually enter a value.
 @IBInspectable public var enableManualEditing: Bool = false
-
+    
 /// The value added/subtracted when one of the two buttons is pressed.
 @IBInspectable public var stepValue: Double = 0.1
     
 /// When set to true, keeping a button pressed will continuously increase/decrease the value every 0.1s.
 @IBInspectable public var autorepeat: Bool = true
+
+/// The background color of the stepper buttons while pressed.
+@IBInspectable public var highlightedBackgroundColor: UIColor = UIColor(white: 1.0, alpha: 0.1)
+
+/// The color of the +/- icons when in disabled state.
+@IBInspectable public var disabledIconButtonColor: UIColor = UIColor.gray
+
+/// The color of the +/- buttons background when in disabled state.
+@IBInspectable public var disabledBackgroundButtonColor: UIColor = UIColor.clear
+
+/// The background color of the plus and minus buttons.
+@IBInspectable public var backgroundButtonColor: UIColor = UIColor.clear
+    
+/// The background color of the center view that contains the value label.
+@IBInspectable public var backgroundLabelColor: UIColor = UIColor.clear
+    
+/// The text color of the value label in positioned in the center.
+@IBInspectable public var labelTextColor: UIColor = UIColor.white
     
 /// Describes the format of the value.
-public var numberFormatter: NSNumberFormatter
+public var numberFormatter: NumberFormatter
     
 // Default width of the stepper. Taken from the official UIStepper object.
 public let defaultWidth = 141.0
     
 // Default height of the stepper. Taken from the official UIStepper object.
 public let defaultHeight = 29.0
+
+/// Value label that displays the current value displayed at the center of the stepper.
+public let valueLabel: UILabel
 ```
 
 ## Installation
