@@ -202,7 +202,7 @@ private enum Button: Int {
         return CGSize(width: defaultWidth, height: defaultHeight)
     }
 
-    override open static var requiresConstraintBasedLayout: Bool {
+    override public static var requiresConstraintBasedLayout: Bool {
         return true
     }
 
