@@ -110,7 +110,8 @@ github "BalestraPatrick/ValueStepper"
 ## Requirements
 iOS 8.3 and Swift 4.0 are required.
 
-- If you are using Swift 4, use the [master branch](https://github.com/BalestraPatrick/ValueStepper/tree/master).
+- If you are using Swift 5, use the [master branch](https://github.com/BalestraPatrick/ValueStepper/tree/master).
+- If you are using Swift 4.2, use the [swift-4.2 branch](https://github.com/BalestraPatrick/ValueStepper/tree/swift-4.2).
 - If you are using Swift 3.2, use the [swift-3.2 branch](https://github.com/BalestraPatrick/ValueStepper/tree/swift-3.2).
 - If you are using Swift 2.3, use the [swift-2.3 branch](https://github.com/BalestraPatrick/ValueStepper/tree/swift-2.3).
 
